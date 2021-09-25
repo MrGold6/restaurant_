@@ -10,13 +10,12 @@ use Illuminate\Http\Request;
 
 class BookingServiceImp implements BookingService
 {
-
-    public function getAll()
+    public static  function getAll()
     {
         return Booking::all();
     }
 
-    public function create(Request $request)
+    public static  function create(Request $request)
     {
         $booking = new Booking;
         $booking->name = $request['name'];
@@ -26,17 +25,17 @@ class BookingServiceImp implements BookingService
         $booking->save();
     }
 
-    public function delete($id)
+    public static  function delete($id)
     {
         Booking::all()->find($id)->delete();
     }
 
-    public function getByID($id)
+    public static  function getByID($id)
     {
         return Booking::all()->find($id);
     }
 
-    public function update($id, Request $request)
+    public static  function update($id, Request $request)
     {
         $booking = Booking::all()->find($id);
         $booking->name = $request['name'];
@@ -46,12 +45,12 @@ class BookingServiceImp implements BookingService
         $booking->save();
     }
 
-    public function getAllSortByDayANDSortByTime()
+    public static  function getAllSortByDayANDSortByTime()
     {
         return Booking::all()->sortBy('dateTime');
     }
 
-    public function getAllByDay($day)
+    public static  function getAllByDay($day)
     {
         return Booking::all()->sortBy('dateTime')->where('dateTime', '=', $day);
     }

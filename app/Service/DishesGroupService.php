@@ -6,9 +6,9 @@ use Illuminate\Http\Request;
 
 interface DishesGroupService
 {
-    public function getAll();
-    public function create(Request $request);
-    public function delete($id);
-    public function getByID($id);
-    public function update($id, Request $request);
+    public static  function getAll();
+    public static  function create(Request $request);
+    public static  function delete($id);
+    public static  function getByID($id);
+    public static  function update($id, Request $request);
 }
