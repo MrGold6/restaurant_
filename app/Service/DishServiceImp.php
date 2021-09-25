@@ -9,12 +9,12 @@ use Illuminate\Http\Request;
 
 class DishServiceImp implements DishServiсe
 {
-    public static  function getAll()
+    public static function getAll()
     {
-        return Dish::all();
+        return Dish::all()->sortBy('dishes_group_id');
     }
 
-    public static  function create(Request $request)
+    public static function create(Request $request)
     {
         $dish = new Dish;
         $dish->name = $request['name'];
@@ -25,17 +25,17 @@ class DishServiceImp implements DishServiсe
         $dish->save();
     }
 
-    public static  function delete($id)
+    public static function delete($id)
     {
         Dish::all()->find($id)->delete();
     }
 
-    public static  function getByID($id)
+    public static function getByID($id)
     {
         return Dish::all()->find($id);
     }
 
-    public static  function update($id, Request $request)
+    public static function update($id, Request $request)
     {
         $dish = (new Dish)::all()->find($id);
         $dish->name = $request['name'];
@@ -46,7 +46,7 @@ class DishServiceImp implements DishServiсe
         $dish->save();
     }
 
-    public static  function getAllSortByGroup()
+    public static function getAllSortByGroup()
     {
         return Dish::all()->sortBy('dishes_group_id');
     }
