@@ -10,15 +10,27 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\UserController;
+
 
 //admin_test_view
+
 Route::get('/booking', function () {   // change on booking
     return view('admin/tables/booking');
 });
 
-Route::get('/table', function () {
-    return view('admin/tables/table');
-});
+Route::get('/Admin/Home', [AdminController::class, 'home'])->name('home');
+Route::get('/Admin/Table', [AdminController::class, 'table'])->name('table');
+Route::get('/Admin/Group', [AdminController::class, 'group'])->name('group');
+Route::get('/Admin/Dish', [AdminController::class, 'dish'])->name('Dish');
+
+
+
+Route::get('/home', [AdminController::class, 'home']);
+Route::get('/table', [AdminController::class, 'table']);
+Route::get('/group', [AdminController::class, 'group']);
+Route::get('/dish', [AdminController::class, 'dish']);
 
 Route::get('/group', function () {
     return view('admin/tables/group');

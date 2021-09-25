@@ -7,6 +7,9 @@
         <div>
 
             <ul>
+                <li>
+                    <a href="{{url('/today_booking')}}">Today Booking</a>
+                </li>
 
                 <li>
                     <a href="{{url('/')}}">Booking</a>

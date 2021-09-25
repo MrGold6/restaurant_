@@ -9,17 +9,21 @@
         }
     </style>
     <h2>Group</h2>
+    <a href="{{url('/create_group')}}">Create</a>
     <table>
         <tr>
             <th>Ід</th>
             <th>Назва</th>
             <th>Дії</th>
         </tr>
+        @foreach($Group as $item)
         <tr>
-            <td></td>
-            <td></td>
+
+            <td>{{$item['id']}}</td>
+            <td>{{$item['name']}}</td>
             <td><a href="#">Edit</a> <a href="#">Delete</a></td>
 
         </tr>
+            @endforeach
     </table>
 @endsection
