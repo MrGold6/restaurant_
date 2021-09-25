@@ -1,10 +1,10 @@
 <?php
 
-namespace App\model;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Dish extends Model
+class DishesGroup extends Model
 {
     //
 }

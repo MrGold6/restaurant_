@@ -12,7 +12,7 @@
                 </li>
 
                 <li>
-                    <a href="{{url('/booking')}}">Booking</a>
+                    <a href="{{url('/')}}">Booking</a>
                 </li>
                 <li >
                     <a href="{{url('/table')}}">Table</a>

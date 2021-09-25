@@ -22,15 +22,17 @@
             <th>Номер столику</th>
             <th>Дії</th>
         </tr>
+        @foreach($Booking as $item)
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>{{$item['id']}}</td>
+            <td>{{$item['name']}}</td>
+            <td>{{$item['phone']}}</td>
+            <td>{{$item['dateTime']}}</td>
+            <td>{{$item['count_of_people']}}</td>
+            <td>{{$item['table_id']}}</td>
+            <td>{{$item['name']}}</td>
             <td><a href="#">Edit</a> <a href="#">Delete</a></td>
         </tr>
+        @endforeach
     </table>
 @endsection

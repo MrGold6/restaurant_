@@ -17,11 +17,13 @@
             <th>Статус</th>
             <th>Дії</th>
         </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td><a href="#">Edit</a> <a href="#">Delete</a></td>
-        </tr>
+        @foreach($Tables as $item)
+            <tr>
+                <td></td>
+                <td>{{$item['count']}}</td>
+                <td>{{$item['status']}}</td>
+                <td><a href="#">Edit</a> <a href="#">Delete</a></td>
+            </tr>
+        @endforeach
     </table>
 @endsection
