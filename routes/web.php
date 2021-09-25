@@ -13,8 +13,9 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\UserController;
 
-//admin_test_view
+
 Route::get('/', [AdminController::class, 'home']);
 Route::get('/table', [AdminController::class, 'table']);
 Route::get('/group', [AdminController::class, 'group']);
 Route::get('/dish', [AdminController::class, 'dish']);
+
