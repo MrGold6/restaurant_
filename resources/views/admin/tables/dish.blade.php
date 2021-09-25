@@ -10,6 +10,7 @@
     </style>
 
     <h2>Dish</h2>
+    <a href="{{url('/create_dish')}}">Create</a>
     <table>
         <tr>
             <th>Ід</th>

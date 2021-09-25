@@ -9,6 +9,7 @@
         }
     </style>
     <h2>Table</h2>
+    <a href="{{url('/create_table')}}">Create</a>
     <table>
         <tr>
             <th>Ід</th>

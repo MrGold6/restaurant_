@@ -9,8 +9,8 @@
         }
     </style>
 
-    <h2>Booking</h2>
-    <a href="{{url('/create_booking')}}">Create</a>
+    <h2>Today Booking</h2>
+    <h2>Active</h2>
     <table>
         <tr>
             <th>Ід</th>
@@ -30,7 +30,31 @@
             <td></td>
             <td></td>
             <td></td>
-            <td><a href="#">Edit</a> <a href="#">Delete</a></td>
+            <td><a href="#">Done</a></td>
+        </tr>
+    </table>
+
+    <h2>Not Active</h2>
+    <table>
+        <tr>
+            <th>Ід</th>
+            <th>Дата</th>
+            <th>Час</th>
+            <th>Ім'я</th>
+            <th>Номер телефону</th>
+            <th>Кількість людей</th>
+            <th>Номер столику</th>
+
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
         </tr>
     </table>
 @endsection

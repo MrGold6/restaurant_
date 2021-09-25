@@ -9,6 +9,7 @@
         }
     </style>
     <h2>Group</h2>
+    <a href="{{url('/create_group')}}">Create</a>
     <table>
         <tr>
             <th>Ід</th>
