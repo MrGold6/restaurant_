@@ -12,7 +12,7 @@
 */
 
 //admin_test_view
-Route::get('/', function () {
+Route::get('/booking', function () {   // change on booking
     return view('admin/tables/booking');
 });
 
@@ -26,4 +26,12 @@ Route::get('/group', function () {
 
 Route::get('/dish', function () {
     return view('admin/tables/dish');
+});
+
+
+
+//user_test_view
+
+Route::get('/', function () {
+    return view('user/home');
 });
