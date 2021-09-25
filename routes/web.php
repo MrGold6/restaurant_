@@ -11,6 +11,19 @@
 |
 */
 
+//admin_test_view
 Route::get('/', function () {
-    return view('welcome');
+    return view('admin/tables/booking');
+});
+
+Route::get('/table', function () {
+    return view('admin/tables/table');
+});
+
+Route::get('/group', function () {
+    return view('admin/tables/group');
+});
+
+Route::get('/dish', function () {
+    return view('admin/tables/dish');
 });
