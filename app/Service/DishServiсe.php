@@ -1,13 +1,15 @@
 <?php
 
-namespace App\Serviсe;
+namespace App\Service;
+
+use Illuminate\Http\Request;
 
 interface DishServiсe
 {
     public function getAll();
-    public function create(array $data);
+    public function create(Request $request);
     public function delete($id);
     public function getByID($id);
-    public function update($id,array $data);
+    public function update($id, Request $request);
     public function getAllSortByGroup();
 }
