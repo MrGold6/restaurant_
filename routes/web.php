@@ -19,3 +19,11 @@ Route::get('/', function () {
 Route::get('/table', function () {
     return view('admin/tables/table');
 });
+
+Route::get('/group', function () {
+    return view('admin/tables/group');
+});
+
+Route::get('/dish', function () {
+    return view('admin/tables/dish');
+});

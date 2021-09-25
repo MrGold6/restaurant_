@@ -14,13 +14,13 @@
             <th>Ід</th>
             <th>Кількість місць</th>
             <th>Статус</th>
-
+            <th>Дії</th>
         </tr>
         <tr>
             <td></td>
             <td></td>
             <td></td>
-
+            <td><a href="#">Edit</a> <a href="#">Delete</a></td>
         </tr>
     </table>
 @endsection

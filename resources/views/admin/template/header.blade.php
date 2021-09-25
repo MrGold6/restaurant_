@@ -14,8 +14,11 @@
                 <li >
                     <a href="{{url('/table')}}">Table</a>
                 </li>
-                <li>
-                    <a  href="#">About</a>
+                <li >
+                    <a href="{{url('/group')}}">Group</a>
+                </li>
+                <li >
+                    <a href="{{url('/dish')}}">Dish</a>
                 </li>
 
             </ul>

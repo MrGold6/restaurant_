@@ -19,6 +19,7 @@
             <th>Номер телефону</th>
             <th>Кількість людей</th>
             <th>Номер столику</th>
+            <th>Дії</th>
         </tr>
         <tr>
             <td></td>
@@ -28,6 +29,7 @@
             <td></td>
             <td></td>
             <td></td>
+            <td><a href="#">Edit</a> <a href="#">Delete</a></td>
         </tr>
     </table>
 @endsection
