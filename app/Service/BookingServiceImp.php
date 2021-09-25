@@ -22,6 +22,7 @@ class BookingServiceImp implements BookingService
     {
         $booking = new Booking;
         $booking->name = $request['name'];
+        $booking->status = 1;
         $booking->number = $request['phone'];
         $booking->dateTime = $request['dateTime'];
         $booking->countPeople = $request['countPeople'];
@@ -63,5 +64,10 @@ class BookingServiceImp implements BookingService
     }
     public static function currentDay() {
         return DB::table('bookings')->whereDay('dateTime', '=', Carbon::now())->orderBy('dateTime');
+    }
+    public static function completeReserveTable($id) {
+        $booking = Booking::all()->find($id);
+        $booking->status = 0;
+        $booking->save();
     }
 }

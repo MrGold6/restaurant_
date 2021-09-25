@@ -35,4 +35,7 @@ class AdminController extends Controller
     public function sortReserveTableCurrentDay() {
         return view('', ['ReserveTable' => BookingServiceImp::currentDay()]);
     }
+    public function completeReserveTable($id) {
+        BookingServiceImp::completeReserveTable($id);
+    }
 }
