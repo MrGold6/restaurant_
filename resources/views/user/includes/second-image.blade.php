@@ -1,0 +1,1 @@
+<img src="http://boboti.com.ua/wp-content/themes/thesteam-child/images/bg_2.jpg" style="width: 100%; height: auto">
