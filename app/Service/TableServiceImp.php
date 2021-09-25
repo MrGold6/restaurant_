@@ -9,12 +9,12 @@ use Illuminate\Http\Request;
 
 class TableServiceImp implements TableService
 {
-    public static  function getAll()
+    public static function getAll()
     {
         return Table::all();
     }
 
-    public static  function create(Request $request)
+    public static function create(Request $request)
     {
         $table = new Table;
         $table->count = $request['count'];
@@ -22,17 +22,17 @@ class TableServiceImp implements TableService
         $table->save();
     }
 
-    public static  function delete($id)
+    public static function delete($id)
     {
         Table::all()->find($id)->delete();
     }
 
-    public static  function getByID($id)
+    public static function getByID($id)
     {
         return Table::all()->find($id);
     }
 
-    public static  function update($id, Request $request)
+    public static function update($id, Request $request)
     {
         $table = (new Table)::all()->find($id);
         $table->count = $request['count'];
