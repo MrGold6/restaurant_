@@ -12,38 +12,18 @@
 */
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\UserController;
+use App\Http\Middleware\CheckAdminAuth;
 
 
 //admin_test_view
-
-Route::get('/booking', function () {   // change on booking
-    return view('admin/tables/booking');
-});
-
-Route::get('/Admin/Home', [AdminController::class, 'home'])->name('home');
-Route::get('/Admin/Table', [AdminController::class, 'table'])->name('table');
-Route::get('/Admin/Group', [AdminController::class, 'group'])->name('group');
-Route::get('/Admin/Dish', [AdminController::class, 'dish'])->name('Dish');
-
-
-
-Route::get('/home', [AdminController::class, 'home']);
-Route::get('/table', [AdminController::class, 'table']);
-Route::get('/group', [AdminController::class, 'group']);
-Route::get('/dish', [AdminController::class, 'dish']);
-
-Route::get('/group', function () {
-    return view('admin/tables/group');
-});
-
-Route::get('/dish', function () {
-    return view('admin/tables/dish');
-});
-
+Route::get('/Admin/Home', [AdminController::class, 'home'])->name('AdminHome');
+Route::get('/Admin/Table', [AdminController::class, 'table'])->name('AdminTable');
+Route::get('/Admin/Group', [AdminController::class, 'group'])->name('AdminGroup');
+Route::get('/Admin/Dish', [AdminController::class, 'dish'])->name('AdminDish');
+Route::get('/Admin/Booking', [AdminController::class, 'booking'])->name('AdminBooking');
+Route::post('/Admin/Auth', [AdminController::class, 'auth'])->name('AdminAuth');
 
 
 //user_test_view
-
-Route::get('/', function () {
-    return view('user/home');
-});
+Route::get('/', [UserController::class, 'home'])->name('home');
+Route::post('/home', [UserController::class, 'reserveTable'])->name('bookTable');
