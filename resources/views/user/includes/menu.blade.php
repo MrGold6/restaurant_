@@ -14,10 +14,10 @@ background-position: center center;     background-color: #000000;">
                 <ul class="dishes">
                      @foreach($dishes as $dish)
                         <li class="product-name">
-                            {{$item['name']}}
-                            <span class="product-price">{{$item['cost']}}</span>
+                            {{$dish['name']}}
+                            <span class="product-price">{{$dish['cost']}}</span>
                         </li>
-                        <li class="product-description">{{$item['ingredients']}}</li>
+                        <li class="product-description">{{$dish['ingredients']}}</li>
                         
                     @endforeach
                 </ul>

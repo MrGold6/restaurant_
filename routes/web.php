@@ -44,6 +44,4 @@ Route::get('/dish', function () {
 
 //user_test_view
 
-Route::get('/', function () {
-    return view('user/home');
-});
+Route::get('/', [UserController::class, 'home']);
