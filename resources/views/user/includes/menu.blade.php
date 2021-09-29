@@ -12,6 +12,7 @@ background-position: center center;     background-color: #000000;">
             </div>  
             <div class="menu-dishes">
                 <ul class="dishes">
+<<<<<<< HEAD
                      @foreach($dishes as $dish)
                         <li class="product-name">
                             {{$dish['name']}}
@@ -20,6 +21,16 @@ background-position: center center;     background-color: #000000;">
                         <li class="product-description">{{$dish['ingredients']}}</li>
                         
                     @endforeach
+=======
+                    {{-- @foreach($dishes as $dish)
+                        <li class="product-name">
+                            {{$item['name']}}
+                            <span class="product-price">{{$item['cost']}}</span>
+                        </li>
+                        <li class="product-description">{{$item['ingredients']}}</li>
+                        
+                    @endforeach --}}
+>>>>>>> main
                 </ul>
             </div>
         </div>

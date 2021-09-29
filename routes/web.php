@@ -44,4 +44,10 @@ Route::get('/dish', function () {
 
 //user_test_view
 
+<<<<<<< HEAD
 Route::get('/', [UserController::class, 'home']);
+=======
+Route::get('/', function () {
+    return view('user/home');
+});
+>>>>>>> main
