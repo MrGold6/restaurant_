@@ -63,11 +63,14 @@ class BookingServiceImp implements BookingService
         return DB::table('bookings')->whereDay('dateTime', '=', $request['date'])->orderBy('dateTime');
     }
     public static function currentDay() {
-        return DB::table('bookings')->whereDay('dateTime', '=', Carbon::now())->orderBy('dateTime');
+        return DB::table('bookings')->whereDay('dateTime', '=', Carbon::now()->format('Y-m-d'))->orderBy('dateTime')->get();
     }
     public static function completeReserveTable($id) {
         $booking = Booking::all()->find($id);
         $booking->status = 0;
         $booking->save();
+        $table = Table::all()->find($booking->table_id);
+        $table->status = 0;
+        $table->save();
     }
 }

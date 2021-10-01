@@ -30,7 +30,7 @@
             <td></td>
             <td></td>
             <td></td>
-            <td><a href="#">Done</a></td>
+            <td><button id="completeBooking" bookingID="1">Done</button></td>
         </tr>
     </table>
 
@@ -57,4 +57,19 @@
 
         </tr>
     </table>
+    <script>
+        $('body').delegate('#completeBooking', 'click', function () {
+            $.ajax({
+                ulr: '',
+                method: 'post',
+                data: {
+                    _token: $('meta[name="csrf-token"]').attr('content'),
+                    id: $(this).attr('bookingID')
+                },
+                success: function () {
+                    location.reload()
+                }
+            })
+        })
+    </script>
 @endsection
