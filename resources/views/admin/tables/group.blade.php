@@ -10,20 +10,27 @@
     </style>
     <h2>Group</h2>
     <a href="{{url('/create_group')}}">Create</a>
-    <table>
-        <tr>
-            <th>Ід</th>
-            <th>Назва</th>
-            <th>Дії</th>
-        </tr>
-        @foreach($Group as $item)
-        <tr>
 
-            <td>{{$item['id']}}</td>
-            <td>{{$item['name']}}</td>
-            <td><a href="#">Edit</a> <a href="#">Delete</a></td>
+    <div class="table-responsive">
+        <table class="table table-striped table-sm">
+            <thead>
+            <tr>
+                <th>Ід</th>
+                <th>Назва</th>
+                <th>Дії</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach($Group as $item)
+                <tr>
 
-        </tr>
+                    <td>{{$item['id']}}</td>
+                    <td>{{$item['name']}}</td>
+                    <td><a href="#">Edit</a> <a href="#">Delete</a></td>
+
+                </tr>
             @endforeach
-    </table>
+            </tbody>
+        </table>
+    </div>
 @endsection
