@@ -1,10 +1,4 @@
-<section class="fourth-section" style="background-image: url(http://boboti.com.ua/wp-content/uploads/2017/10/IMG_4480.jpg); height: 850px; display: block;     background-repeat: no-repeat;
-background-size: cover;
-background-position: center center;     background-color: #000000;">
-    <div class="behind-menu" style="height: inherit; background-color: rgba(0, 0, 0, 0.48);">
-        <div class="menu-title-aligner">
-            <h2 style="text-align: center; margin-top:20px; margin-bottom: 150px;">Меню</h2>
-        </div>
+<h2 style="text-align: center; margin-top:20px; margin-bottom: 20px;">Меню</h2>
 
         <div class="menu">
             <div class="menu-title">
@@ -12,7 +6,7 @@ background-position: center center;     background-color: #000000;">
             </div>  
             <div class="menu-dishes">
                 <ul class="dishes">
-<<<<<<< HEAD
+
                      @foreach($dishes as $dish)
                         <li class="product-name">
                             {{$dish['name']}}
@@ -21,19 +15,11 @@ background-position: center center;     background-color: #000000;">
                         <li class="product-description">{{$dish['ingredients']}}</li>
                         
                     @endforeach
-=======
-                    {{-- @foreach($dishes as $dish)
-                        <li class="product-name">
-                            {{$item['name']}}
-                            <span class="product-price">{{$item['cost']}}</span>
-                        </li>
-                        <li class="product-description">{{$item['ingredients']}}</li>
-                        
-                    @endforeach --}}
->>>>>>> main
+
                 </ul>
             </div>
         </div>
     </div>
 
 </section>
+<img src="http://boboti.com.ua/wp-content/uploads/2017/10/IMG_4480.jpg" style="width: 100%">

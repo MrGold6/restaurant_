@@ -12,10 +12,10 @@ use Illuminate\Support\Facades\Redirect;
 class UserController extends Controller
 {
     public function home() {
-        return view('home', ['dishes' => DishServiceImp::getAll()]); //sort by DishesGroup
+        return view('user/home', ['dishes' => DishServiceImp::getAll()]); //sort by DishesGroup
     }
     public function reserveTable(Request $request) {
         TableServiceImp::create($request);
-        return Redirect::back();
+        return Redirect::back(); //or redirect()->route('/');
     }
 }
