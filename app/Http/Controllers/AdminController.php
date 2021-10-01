@@ -56,4 +56,7 @@ class AdminController extends Controller
         else
             return Redirect::back();
     }
+    public function todayBooking() {
+        return view('admin/tables/today_booking', ['Booking' => BookingServiceImp::currentDay()]);
+    }
 }

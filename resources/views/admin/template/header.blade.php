@@ -8,7 +8,7 @@
 
             <ul>
                 <li>
-                    <a href="{{url('/today_booking')}}">Today Booking</a>
+                    <a href="{{ route('AdminTodayBooking') }}">Today Booking</a>
                 </li>
 
                 <li>
