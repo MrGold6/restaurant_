@@ -1,27 +1,28 @@
 <nav>
     <div>
-        <a href="#">Admin</a>
-
-
+        <a href="{{route('AdminHome')}}">Admin</a>
 
         <div>
-
             <ul>
                 <li>
-                    <a href="{{ route('AdminTodayBooking') }}">Today Booking</a>
+                    <a href="{{route('AdminIn') }}">Увійти</a>
                 </li>
 
                 <li>
-                    <a href="{{url('/')}}">Booking</a>
+                    <a href="{{route('AdminTodayBooking') }}">Today Booking</a>
+                </li>
+
+                <li>
+                    <a href="{{route('AdminHome')}}">Booking</a>
                 </li>
                 <li >
-                    <a href="{{url('/table')}}">Table</a>
+                    <a href="{{route('AdminTable')}}">Table</a>
                 </li>
                 <li >
-                    <a href="{{url('/group')}}">Group</a>
+                    <a href="{{route('AdminGroup')}}">Group</a>
                 </li>
                 <li >
-                    <a href="{{url('/dish')}}">Dish</a>
+                    <a href="{{route('AdminDish')}}">Dish</a>
                 </li>
 
             </ul>

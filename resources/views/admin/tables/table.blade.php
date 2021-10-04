@@ -10,20 +10,29 @@
     </style>
     <h2>Table</h2>
     <a href="{{url('/create_table')}}">Create</a>
-    <table>
-        <tr>
-            <th>Ід</th>
-            <th>Кількість місць</th>
-            <th>Статус</th>
-            <th>Дії</th>
-        </tr>
-        @foreach($Tables as $item)
+
+    <div class="table-responsive">
+        <table class="table table-striped table-sm">
+            <thead>
             <tr>
-                <td></td>
-                <td>{{$item['count']}}</td>
-                <td>{{$item['status']}}</td>
-                <td><a href="#">Edit</a> <a href="#">Delete</a></td>
+                <th>Ід</th>
+                <th>Кількість місць</th>
+                <th>Статус</th>
+                <th>Дії</th>
             </tr>
-        @endforeach
-    </table>
+            </thead>
+            <tbody>
+            @foreach($Tables as $item)
+                <tr>
+                    <td>{{$item['id']}}</td>
+                    <td>{{$item['count']}}</td>
+                    <td>{{$item['status']}}</td>
+                    <td><a href="#">Edit</a> <a href="#">Delete</a></td>
+                </tr>
+            @endforeach
+            </tbody>
+        </table>
+    </div>
+
+
 @endsection

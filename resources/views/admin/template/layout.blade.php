@@ -12,8 +12,14 @@
     <title>@yield('title')</title>
 </head>
 <body>
+<div class="container-fluid">
+    <div class="row">
 @include('admin.template.header')
+<content class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
 @yield('content')
+</content>
 @include('admin.template.footer')
+    </div>
+</div>
 </body>
 </html>
