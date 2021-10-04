@@ -22,8 +22,8 @@ Route::get('/Admin/Group', [AdminController::class, 'group'])->name('AdminGroup'
 Route::get('/Admin/Dish', [AdminController::class, 'dish'])->name('AdminDish');
 Route::get('/Admin/Booking', [AdminController::class, 'booking'])->name('AdminBooking');
 Route::get('/Admin/TodayBooking', [AdminController::class, 'todayBooking'])->name('AdminTodayBooking');
+Route::get('/Admin/Login', [AdminController::class, 'login'])->name('AdminTodayBooking');
 Route::post('/Admin/Auth', [AdminController::class, 'auth'])->name('AdminAuth');
-
 
 
 //user_test_view

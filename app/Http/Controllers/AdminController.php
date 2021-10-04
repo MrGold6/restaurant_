@@ -17,7 +17,7 @@ class AdminController extends Controller
 {
     public function __construct()
     {
-       // $this->middleware(CheckAdminAuth::class);
+        $this->middleware(CheckAdminAuth::class);
     }
     public function home() {
         return view('admin/tables/booking', ['Booking' => BookingServiceImp::getAll()]);
