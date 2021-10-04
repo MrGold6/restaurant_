@@ -31,9 +31,8 @@ class AdminController extends Controller
     public function dish() {
         return view('admin/tables/dish', ['Dishes' => DishServiceImp::getAll()]);
     }
-    public function booking() {
-        return view('admin/tables/booking');
-    }
+
+
     public function reserveTable(Request $request) {
         TableServiceImp::create($request);
         return Redirect::back();
@@ -58,5 +57,10 @@ class AdminController extends Controller
     }
     public function todayBooking() {
         return view('admin/tables/today_booking', ['Booking' => BookingServiceImp::currentDay()]);
+    }
+
+    //test!!!!
+    public function auget() {
+        return view('admin/forms/form_auth');
     }
 }

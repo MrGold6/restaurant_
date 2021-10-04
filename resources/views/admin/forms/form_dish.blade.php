@@ -2,15 +2,16 @@
 @section('title')Dish @endsection
 @section('content')
     <h2>Dish</h2>
-    <form action="#">
+    <form action="{{ route('CreateDish') }}" >
 
         <label for="id">Ід:</label><br>
         <input type="number" name="id"><br>
-
         <label for="name">Назва:</label><br>
         <input type="text" name="name"><br><br>
         <label for="cost">Вартість:</label><br>
         <input type="number" name="cost"><br><br>
+        <label for="count">Вага:</label><br>
+        <input type="number" name="count"><br><br>
         <label for="ingredients">Інгрідієнти:</label><br>
         <input type="text" name="ingredients"><br><br>
         <label for="dishes_group_id">Група:</label><br>
