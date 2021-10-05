@@ -105,10 +105,6 @@ class AdminController extends Controller
         return view('admin/forms/form_table', ['Table' => TableServiceImp::getByID($id)]);
     }
 
-    public function createBooking(Request $request) {
-        BookingServiceImp::create($request);
-        return redirect()->route('AdminHome');
-    }
     public function createDish(Request $request) {
         DishServiceImp::create($request);
         return redirect()->route('AdminDish');

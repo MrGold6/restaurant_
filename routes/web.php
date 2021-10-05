@@ -27,7 +27,6 @@ Route::get('/Admin/TodayBooking', [AdminController::class, 'todayBooking'])->nam
 //Route::get('/Admin/Login', [AdminController::class, 'login'])->name('AdminLogin'); //Повернення view з входом (Не нада, в CheckAdminAuth перевірка на авторизацію (При звернені до любих функцій, перевірка в конструкторі), якщо кукі немає, то автоматично перейде на сторінку входу)
 Route::post('/Admin/Auth', [AdminController::class, 'auth'])->name('AdminAuth'); //Вхід і запис у кукі
 
-Route::post('/Admin/createBooking', [AdminController::class, 'createBooking'])->name('AdminCreateBooking');
 Route::post('/Admin/createDish', [AdminController::class, 'createDish'])->name('AdminCreateDish');
 Route::post('/Admin/createDishGroup', [AdminController::class, 'createDishGroup'])->name('AdminCreateDishGroup');
 Route::post('/Admin/createTable', [AdminController::class, 'createTable'])->name('AdminCreateTable');
@@ -59,3 +58,4 @@ Route::get('/Admin/deleteTable', [AdminController::class, 'deleteTable'])->name(
 //UsersRoute
 Route::get('/', [UserController::class, 'home'])->name('home');
 Route::post('/home', [UserController::class, 'reserveTable'])->name('bookTable');
+Route::post('/Admin/createBooking', [UserController::class, 'createBooking'])->name('createBooking');
