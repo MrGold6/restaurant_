@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Service\BookingServiceImp;
 use App\Service\DishesGroupServiceImp;
 use App\Service\DishServiceImp;
 use App\Service\TableServiceImp;
@@ -18,5 +19,9 @@ class UserController extends Controller
     public function reserveTable(Request $request) {
         TableServiceImp::create($request);
         return Redirect::back(); //or redirect()->route('/');
+    }
+    public function createBooking(Request $request) {
+        BookingServiceImp::create($request);
+        return Redirect::back();
     }
 }

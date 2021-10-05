@@ -21,22 +21,29 @@ class AdminController extends Controller
 {
     public function __construct()
     {
-        $this->middleware(CheckAdminAuth::class);
+        if(substr(url()->current(), -12) != '/Admin/LogIn' && substr(url()->current(), -11) != '/Admin/Auth')
+            $this->middleware(CheckAdminAuth::class);
     }
 
     public function auth(Request $request) {
         if($request['Admin'] == 'root' && $request['Password'] == 'root') {
-            Cookie::make('Admin', $request['Admin']);
-            Cookie::make('Password', $request['Password']);
-            return redirect('AdminHome');
+            Cookie::queue(Cookie::make('Admin', $request['Admin'], 60 * 60 * 24 * 7));
+            Cookie::queue(Cookie::make('Password', $request['Password'], 60 * 60 * 24 * 7));
+            return redirect()->route('AdminHome');
         }
         else
             return Redirect::back();
     }
+    public function login() {
+        if(Cookie::get('Admin') == 'root' && Cookie::get('Password'))
+            return redirect()->route('AdminHome');
+        else
+            return view('admin/forms/form_auth');
+    }
     public function logout() {
-        Cookie::forget('Admin');
-        Cookie::forget('Password');
-        return Redirect::back(); //Тестити!!!!
+        Cookie::queue(Cookie::forget('Admin'));
+        Cookie::queue(Cookie::forget('Password'));
+        return view('admin/forms/form_auth'); //Тестити!!!!
     }
 
     public function home() {
@@ -67,11 +74,37 @@ class AdminController extends Controller
     public function todayBooking() {
         return view('admin/tables/today_booking', ['Booking' => BookingServiceImp::currentDay()]);
     }
-
-    public function createBooking(Request $request) {
-        BookingServiceImp::create($request);
-        return redirect()->route('AdminHome');
+    public function completeBooking(Request $request) {
+        BookingServiceImp::completeReserveTable($request['id']);
+        return BookingServiceImp::getAll();
     }
+
+    public function createBookingView() {
+        return view('admin/forms/form_booking');
+    }
+    public function createDishView() {
+        return view('admin/forms/form_dish');
+    }
+    public function createDishGroupView() {
+        return view('admin/forms/form_group');
+    }
+    public function createTableView() {
+        return view('admin/forms/form_table');
+    }
+
+    public function updateBookingView($id) {
+        return view('admin/forms/form_booking', ['Booking' => BookingServiceImp::getByID($id)]);
+    }
+    public function updateDishView($id) {
+        return view('admin/forms/form_dish', ['Dish' => DishServiceImp::getByID($id)]);
+    }
+    public function updateDishGroupView($id) {
+        return view('admin/forms/form_group', ['DishesGroup' => DishesGroupServiceImp::getByID($id)]);
+    }
+    public function updateTableView($id) {
+        return view('admin/forms/form_table', ['Table' => TableServiceImp::getByID($id)]);
+    }
+
     public function createDish(Request $request) {
         DishServiceImp::create($request);
         return redirect()->route('AdminDish');

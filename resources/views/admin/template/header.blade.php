@@ -5,7 +5,7 @@
         <div>
             <ul>
                 <li>
-                    <a href="{{route('AdminIn') }}">Увійти</a>
+                    <a href="{{route('AdminOut') }}">Вийти</a>
                 </li>
 
                 <li>
