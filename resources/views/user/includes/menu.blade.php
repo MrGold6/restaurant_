@@ -9,10 +9,10 @@
 
                      @foreach($dishes as $dish)
                         <li class="product-name">
-                            {{$dish['name']}}
-                            <span class="product-price">{{$dish['cost']}}</span>
+                            {{$dish->name}}
+                            <span class="product-price">{{$dish->cost}}</span>
                         </li>
-                        <li class="product-description">{{$dish['ingredients']}}</li>
+                        <li class="product-description">{{$dish->ingredients}}</li>
                         
                     @endforeach
 

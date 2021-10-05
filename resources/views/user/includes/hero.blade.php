@@ -1,2 +1,17 @@
+<section class="hero">
+        <div class="image-container">
+            <img src="{{ URL::to('/photos/hero.jpg') }}">
+        </div>
 
-<img src="http://boboti.com.ua/wp-content/uploads/2018/07/cropped-inside_front.jpg" style="height: 100vh; width: 100%">
+        <div class="aligner">
+            <div class="subaligner">
+                <div class="logo-image">
+                    <img src="{{ URL::to('/photos/top_logo.png') }}" alt="">
+                </div>
+                <a href="#">
+                    Забронювати
+                </a>
+            </div>
+        </div>
+    
+    </section>
