@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Http\Middleware\CheckAdminAuth;
+use App\Models\Booking;
+use App\Models\Dish;
+use App\Models\DishesGroup;
+use App\Models\Table;
 use App\Service\BookingServiceImp;
 use App\Service\DishesGroupServiceImp;
 use App\Service\DishesGroupService;
@@ -17,8 +21,24 @@ class AdminController extends Controller
 {
     public function __construct()
     {
-       // $this->middleware(CheckAdminAuth::class);
+        $this->middleware(CheckAdminAuth::class);
     }
+
+    public function auth(Request $request) {
+        if($request['Admin'] == 'root' && $request['Password'] == 'root') {
+            Cookie::make('Admin', $request['Admin']);
+            Cookie::make('Password', $request['Password']);
+            return redirect('AdminHome');
+        }
+        else
+            return Redirect::back();
+    }
+    public function logout() {
+        Cookie::forget('Admin');
+        Cookie::forget('Password');
+        return Redirect::back(); //Тестити!!!!
+    }
+
     public function home() {
         return view('admin/tables/booking', ['Booking' => BookingServiceImp::getAll()]);
     }
@@ -31,8 +51,6 @@ class AdminController extends Controller
     public function dish() {
         return view('admin/tables/dish', ['Dishes' => DishServiceImp::getAll()]);
     }
-
-
     public function reserveTable(Request $request) {
         TableServiceImp::create($request);
         return Redirect::back();
@@ -46,21 +64,58 @@ class AdminController extends Controller
     public function completeReserveTable($id) {
         BookingServiceImp::completeReserveTable($id);
     }
-    public function auth(Request $request) {
-        if($request['Admin'] == 'root' && $request['Password'] == 'root') {
-            Cookie::make('Admin', $request['Admin']);
-            Cookie::make('Password', $request['Password']);
-            return redirect('AdminHome');
-        }
-        else
-            return Redirect::back();
-    }
     public function todayBooking() {
         return view('admin/tables/today_booking', ['Booking' => BookingServiceImp::currentDay()]);
     }
 
-    //test!!!!
-    public function auget() {
-        return view('admin/forms/form_auth');
+    public function createBooking(Request $request) {
+        BookingServiceImp::create($request);
+        return redirect()->route('AdminHome');
+    }
+    public function createDish(Request $request) {
+        DishServiceImp::create($request);
+        return redirect()->route('AdminDish');
+    }
+    public function createDishGroup(Request $request) {
+        DishesGroupServiceImp::create($request);
+        return redirect()->route('AdminGroup');
+    }
+    public function createTable(Request $request) {
+        TableServiceImp::create($request);
+        return redirect()->route('AdminTable');
+    }
+
+    public function deleteBooking($id) {
+        BookingServiceImp::delete($id);
+        return Redirect::back();
+    }
+    public function deleteDish($id) {
+        DishServiceImp::delete($id);
+        return Redirect::back();
+    }
+    public function deleteDishGroup($id) {
+        DishesGroupServiceImp::delete($id);
+        return Redirect::back();
+    }
+    public function deleteTable($id) {
+        TableServiceImp::delete($id);
+        return Redirect::back();
+    }
+
+    public function updateBooking(Request $request) {
+        BookingServiceImp::update($request['id'], $request);
+        return redirect()->route('AdminHome');
+    }
+    public function updateDish(Request $request) {
+        DishServiceImp::update($request['id'], $request);
+        return redirect()->route('AdminDish');
+    }
+    public function updateDishGroup(Request $request) {
+        DishesGroupServiceImp::update($request['id'], $request);
+        return redirect()->route('AdminGroup');
+    }
+    public function updateTable(Request $request) {
+        TableServiceImp::update($request['id'], $request);
+        return redirect()->route('AdminTable');
     }
 }
