@@ -20,7 +20,8 @@ Route::get('/Admin/Home', [AdminController::class, 'home'])->name('AdminHome');
 Route::get('/Admin/Table', [AdminController::class, 'table'])->name('AdminTable');
 Route::get('/Admin/Group', [AdminController::class, 'group'])->name('AdminGroup');
 Route::get('/Admin/Dish', [AdminController::class, 'dish'])->name('AdminDish');
-Route::get('/Admin/Auth', [AdminController::class, 'login'])->name('AdminIn');
+Route::get('/Admin/Logout', [AdminController::class, 'logout'])->name('AdminOut');
+Route::get('/Admin/LogIn', [AdminController::class, 'login'])->name('AdminIn');
 Route::get('/Admin/TodayBooking', [AdminController::class, 'todayBooking'])->name('AdminTodayBooking');
 
 //Route::get('/Admin/Login', [AdminController::class, 'login'])->name('AdminLogin'); //Повернення view з входом (Не нада, в CheckAdminAuth перевірка на авторизацію (При звернені до любих функцій, перевірка в конструкторі), якщо кукі немає, то автоматично перейде на сторінку входу)
@@ -36,10 +37,23 @@ Route::post('/Admin/updateDish', [AdminController::class, 'updateDish'])->name('
 Route::post('/Admin/updateDishGroup', [AdminController::class, 'updateDishGroup'])->name('AdminUpdateDishGroup');
 Route::post('/Admin/updateTable', [AdminController::class, 'updateTable'])->name('AdminUpdateTable');
 
+Route::get('/Admin/createBookingView', [AdminController::class, 'createBookingView'])->name('AdminCreateBookingView');
+Route::get('/Admin/createDishView', [AdminController::class, 'createDishView'])->name('AdminCreateDishView');
+Route::get('/Admin/createDishGroupView', [AdminController::class, 'createDishGroupView'])->name('AdminCreateDishGroupView');
+Route::get('/Admin/createTableView', [AdminController::class, 'createTableView'])->name('AdminCreateTableView');
+
+Route::get('/Admin/updateBookingView/{id}', [AdminController::class, 'updateBookingView'])->name('AdminUpdateBookingView');
+Route::get('/Admin/updateDishView/{id}', [AdminController::class, 'updateDishView'])->name('AdminUpdateDishView');
+Route::get('/Admin/updateDishGroupView/{id}', [AdminController::class, 'updateDishGroupView'])->name('AdminUpdateDishGroupView');
+Route::get('/Admin/updateTableView/{id}', [AdminController::class, 'updateTableView'])->name('AdminUpdateTableView');
+
+Route::post('/Admin/completeBooking', [AdminController::class, 'completeBooking'])->name('AdminCompleteBooking');
 Route::get('/Admin/deleteBooking', [AdminController::class, 'deleteBooking'])->name('AdminDeleteBooking');
 Route::get('/Admin/deleteDish', [AdminController::class, 'deleteDish'])->name('AdminDeleteDish');
 Route::get('/Admin/deleteDishGroup', [AdminController::class, 'deleteDishGroup'])->name('AdminDeleteDishGroup');
 Route::get('/Admin/deleteTable', [AdminController::class, 'deleteTable'])->name('AdminDeleteTable');
+
+
 
 
 //UsersRoute

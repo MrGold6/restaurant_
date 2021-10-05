@@ -37,8 +37,6 @@
                     <td>{{$item['phone']}}</td>
                     <td>{{$item['count_of_people']}}</td>
                     <td>{{$item['table_id']}}</td>
-
-
                     <td><a href="#">Edit</a> <a href="#">Delete</a></td>
                 </tr>
             @endforeach
