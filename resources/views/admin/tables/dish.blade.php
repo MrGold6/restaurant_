@@ -10,7 +10,7 @@
     </style>
 
     <h2>Dish</h2>
-    <a href="{{url('/create_dish')}}">Create</a>
+    <a href="{{ route('AdminCreateDishView') }}">Create</a>
 
     <div class="table-responsive">
         <table class="table table-striped table-sm">
@@ -27,15 +27,18 @@
             </tr>
             </thead>
             <tbody>
+
             @foreach($Dishes as $item)
                 <tr>
                     <td>{{$item->id}}</td>
                     <td>{{$item->name}}</td>
-                    <td{{$item->dishesGroupName}}></td>
+                    <td>{{$item->dishesGroupName}}</td>
                     <td>{{$item->cost}}</td>
                     <td>{{$item->count}}</td>
                     <td>{{$item->ingredients}}</td>
-                    <td><a href="#">Edit</a> <a href="#">Delete</a></td>
+
+                    <td><a href="{{ route('AdminUpdateDishView', $item->id) }}">Edit</a>
+                        <a href="{{ route('AdminDeleteDish', $item->id) }}" >Delete</a></td>
                 </tr>
             @endforeach
             </tbody>

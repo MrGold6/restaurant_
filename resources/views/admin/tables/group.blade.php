@@ -9,7 +9,7 @@
         }
     </style>
     <h2>Group</h2>
-    <a href="{{url('/create_group')}}">Create</a>
+    <a href="{{ route('AdminCreateDishGroupView') }}">Create</a>
 
     <div class="table-responsive">
         <table class="table table-striped table-sm">
@@ -26,7 +26,8 @@
 
                     <td>{{$item['id']}}</td>
                     <td>{{$item['name']}}</td>
-                    <td><a href="#">Edit</a> <a href="#">Delete</a></td>
+                    <td><a href="{{ route('AdminUpdateDishGroupView', $item->id) }}">Edit</a>
+                        <a href="{{ route('AdminDeleteDishGroup', $item->id) }}" >Delete</a></td>
 
                 </tr>
             @endforeach

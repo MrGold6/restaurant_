@@ -9,7 +9,8 @@
         }
     </style>
     <h2>Table</h2>
-    <a href="{{url('/create_table')}}">Create</a>
+
+    <a href="{{ route('AdminCreateTableView') }}">Create</a>
 
     <div class="table-responsive">
         <table class="table table-striped table-sm">
@@ -27,7 +28,8 @@
                     <td>{{$item['id']}}</td>
                     <td>{{$item['count']}}</td>
                     <td>{{$item['status']}}</td>
-                    <td><a href="#">Edit</a> <a href="#">Delete</a></td>
+                    <td><a href="{{ route('AdminUpdateTableView', $item->id) }}">Edit</a>
+                        <a href="{{ route('AdminDeleteTable', $item->id) }}" >Delete</a></td>
                 </tr>
             @endforeach
             </tbody>
