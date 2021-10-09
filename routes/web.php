@@ -47,10 +47,10 @@ Route::get('/Admin/updateDishGroupView/{id}', [AdminController::class, 'updateDi
 Route::get('/Admin/updateTableView/{id}', [AdminController::class, 'updateTableView'])->name('AdminUpdateTableView');
 
 Route::post('/Admin/completeBooking', [AdminController::class, 'completeBooking'])->name('AdminCompleteBooking');
-Route::get('/Admin/deleteBooking', [AdminController::class, 'deleteBooking'])->name('AdminDeleteBooking');
-Route::get('/Admin/deleteDish', [AdminController::class, 'deleteDish'])->name('AdminDeleteDish');
-Route::get('/Admin/deleteDishGroup', [AdminController::class, 'deleteDishGroup'])->name('AdminDeleteDishGroup');
-Route::get('/Admin/deleteTable', [AdminController::class, 'deleteTable'])->name('AdminDeleteTable');
+Route::get('/Admin/deleteBooking/{id}', [AdminController::class, 'deleteBooking'])->name('AdminDeleteBooking');
+Route::get('/Admin/deleteDish/{id}', [AdminController::class, 'deleteDish'])->name('AdminDeleteDish');
+Route::get('/Admin/deleteDishGroup/{id}', [AdminController::class, 'deleteDishGroup'])->name('AdminDeleteDishGroup');
+Route::get('/Admin/deleteTable/{id}', [AdminController::class, 'deleteTable'])->name('AdminDeleteTable');
 
 
 

@@ -93,16 +93,16 @@ class AdminController extends Controller
     }
 
     public function updateBookingView($id) {
-        return view('admin/forms/form_booking', ['Booking' => BookingServiceImp::getByID($id)]);
+        return view('admin/forms/update_booking', ['Booking' => BookingServiceImp::getByID($id)]);
     }
     public function updateDishView($id) {
-        return view('admin/forms/form_dish', ['Dish' => DishServiceImp::getByID($id)]);
+        return view('admin/forms/update_dish', ['Dish' => DishServiceImp::getByID($id)]);
     }
     public function updateDishGroupView($id) {
-        return view('admin/forms/form_group', ['DishesGroup' => DishesGroupServiceImp::getByID($id)]);
+        return view('admin/forms/update_group', ['DishesGroup' => DishesGroupServiceImp::getByID($id)]);
     }
     public function updateTableView($id) {
-        return view('admin/forms/form_table', ['Table' => TableServiceImp::getByID($id)]);
+        return view('admin/forms/update_table', ['Table' => TableServiceImp::getByID($id)]);
     }
 
     public function createDish(Request $request) {

@@ -2,10 +2,9 @@
 @section('title')Group @endsection
 @section('content')
     <h2>Group</h2>
-    <form action="{{ route('CreateBooking') }}" >
+    <form action="{{ route('createBooking') }}" >
 
-        <label for="id">Ід:</label><br>
-        <input type="number" name="id"><br>
+
 
         <label for="name">Ім'я:</label><br>
         <input type="text" name="name"><br><br>

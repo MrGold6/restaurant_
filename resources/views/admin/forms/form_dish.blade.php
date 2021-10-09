@@ -2,10 +2,9 @@
 @section('title')Dish @endsection
 @section('content')
     <h2>Dish</h2>
-    <form action="{{ route('CreateDish') }}" >
+    <form action="{{ route('AdminCreateDish') }}" >
 
-        <label for="id">Ід:</label><br>
-        <input type="number" name="id"><br>
+
         <label for="name">Назва:</label><br>
         <input type="text" name="name"><br><br>
         <label for="cost">Вартість:</label><br>
