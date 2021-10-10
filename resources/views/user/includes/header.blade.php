@@ -13,7 +13,7 @@
                     <a href="#">Меню</a>
                 </div>
                 <div class="header-navbar-nav">
-                    <a href="#">Бронь столика</a>
+                    <a href="#booking">Бронь столика</a>
                 </div>
                 <div class="header-navbar-nav">
                     <a href="#">Галерея</a>
