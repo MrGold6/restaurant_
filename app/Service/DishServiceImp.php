@@ -13,10 +13,14 @@ class DishServiceImp implements DishServiсe
 {
     public static function getAll()
     {
-        return DB::table('dishes')
+        $dishes = [];
+        $dishesOnDB = DB::table('dishes')
             ->join('dishes_groups', 'dishes_groups.id', '=', 'dishes.dishes_group_id')
             ->select('dishes.id as id', 'dishes.name as name', 'dishes.cost as cost', 'dishes.count as count', 'dishes.ingredients as ingredients', 'dishes_groups.name as dishesGroupName')
             ->orderByDesc('dishes_group_id')->get();
+        foreach ($dishesOnDB as $key => $item)
+            $dishes[$item->dishesGroupName][] = $item;
+        return $dishes;
     }
 
     public static function create(Request $request)
