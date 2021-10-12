@@ -12,7 +12,7 @@
     <link rel="shortcut icon" href="#">
     <title>@yield('title')</title>
 </head>
-<body>
+<body>.
 <div class="container-fluid">
     <div class="row">
 @include('admin.template.header')

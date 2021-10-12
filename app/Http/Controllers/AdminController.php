@@ -151,4 +151,8 @@ class AdminController extends Controller
         TableServiceImp::update($request['id'], $request);
         return redirect()->route('AdminTable');
     }
+
+    public function getBookingByDay(Request $request) {
+        return view('admin.tables.booking', ['Booking' => BookingServiceImp::getBookingByDay($request['date'])]);
+    }
 }
