@@ -52,7 +52,7 @@ Route::get('/Admin/deleteDish/{id}', [AdminController::class, 'deleteDish'])->na
 Route::get('/Admin/deleteDishGroup/{id}', [AdminController::class, 'deleteDishGroup'])->name('AdminDeleteDishGroup');
 Route::get('/Admin/deleteTable/{id}', [AdminController::class, 'deleteTable'])->name('AdminDeleteTable');
 
-
+Route::post('/Admin/searchBooking', [AdminController::class, 'getBookingByDay'])->name('AdminSearchBooking');
 
 
 //UsersRoute

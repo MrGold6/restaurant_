@@ -23,8 +23,8 @@ class BookingServiceImp implements BookingService
         $booking = new Booking;
         $booking->name = $request['name'];
         $booking->status = 1;
-        $booking->number = $request['phone'];
-        $booking->dateTime = $request['dateTime'];
+        $booking->phone = $request['phone'];
+        $booking->dateTime = $request['date'].' '.$request['time'];
         $booking->countPeople = $request['countPeople'];
         $booking->save();
     }
@@ -43,8 +43,8 @@ class BookingServiceImp implements BookingService
     {
         $booking = Booking::all()->find($id);
         $booking->name = $request['name'];
-        $booking->number = $request['phone'];
-        $booking->dateTime = $request['dateTime'];
+        $booking->phone = $request['phone'];
+        $booking->dateTime = $request['date'].' '.$request['time'];
         $booking->countPeople = $request['countPeople'];
         $booking->save();
     }
@@ -64,6 +64,9 @@ class BookingServiceImp implements BookingService
     }
     public static function currentDay() {
         return DB::table('bookings')->whereDay('dateTime', now()->day)->orderBy('dateTime')->get();
+    }
+    public static function getBookingByDay($day) {
+        return DB::table('bookings')->whereDay('dateTime', $day)->where('status', '=',1)->orderBy('dateTime')->get();
     }
     public static function completeReserveTable($id) {
         $booking = Booking::all()->find($id);

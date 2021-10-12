@@ -24,12 +24,12 @@ class DishesGroupServiceImp implements DishesGroupService
 
     public static function delete($id)
     {
-        Dish::all()->find($id)->delete();
+        DishesGroup::all()->find($id)->delete();
     }
 
     public static function getByID($id)
     {
-        return Dish::all()->find($id);
+        return DishesGroup::all()->find($id);
     }
 
     public static function update($id, Request $request)
