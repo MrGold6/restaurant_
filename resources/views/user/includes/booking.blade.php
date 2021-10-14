@@ -10,7 +10,7 @@
 					<div class="reservations-guest-num-selector reservations-even">
 						<i class="fa fa-user reservations-icon fa-2x-reservations" aria-hidden="true"></i>
 						<p class="reservations-label-text">
-							Гостей											
+							Гостей
 						</p>
 						<div class="reservations-num-guest-selector-inner">
 							<select class="reservations-desktop-input" id="reservations-num-guests-selector" name="count">
@@ -71,18 +71,19 @@
 					<br>Ресторан працює з 12.00 до 22.00. По п'ятницях, суботах та неділях - до 22.00<br>
 					<br>Шановні гості! В обідній та вечірній час рекомендуємо бронювати столики. <br>
 					<br>Для резерву, будь ласка, оберіть дату та час, і заповніть контактну<br>інформацію в зазначеному розділі або зателефонуйте за номером<br>+38 (068) 096 49 49 з 12:00 до 22:00.</p>
-					
-					
+
+
 					<p class="second-res-row reservations-details-line2"></p>
 				</div>
 			</div>
 			<input id="opentable-res-name" name="opentable-res-name" type="hidden" value="">
 		</div>
+
 		<div class="contact-fields">
 			<!-- reservation submission button - triggers ajax request -->
 			<div class="submit">
 				<button class="reservations-submit reservations-effect no-load">
-						ЗАБРОНЮВАТИ			
+						ЗАБРОНЮВАТИ
 				</button>
 			</div>
 		</div>

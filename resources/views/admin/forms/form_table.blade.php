@@ -2,17 +2,26 @@
 @section('title')Table @endsection
 @section('content')
 
+    <div class="col-xl-7 col-lg-10 col-md-10 col-sm-10 mx-auto p-3 pt-3">
+        <div class="card card_form shadow">
+            <div class="card-body ">
+                <legend class="card-title text-center">Столик</legend>
 
-    <h2>Table</h2>
+                <form action="{{ route('AdminCreateTable') }}" method="post">
+                    @csrf
+                    <div class="row mb-3">
+                        <label class="col-sm-6 col-form-label ln">Кількість місць:</label>
+                        <div class="col-sm-6">
+                            <input class="form-control" type="number" name="count" min="0" max="4" required>
+                        </div>
+                    </div>
 
-    <form action="{{ route('AdminCreateTable') }}" >
+                    <input type="hidden" id="status"
+                           name="status" value="0">
+                    <center><input type="submit" class="btn btn_add" value="Створити"></center>
+                </form>
 
-        <label for="count">Кількість місць:</label><br>
-        <input type="number" name="count"><br><br>
-        <input type="radio" id="status"
-               name="status" value="1">
-        <label for="status">Статус:</label><br>
-        <input type="submit" value="Створити">
-
-    </form>
+            </div>
+        </div>
+    </div>
 @endsection

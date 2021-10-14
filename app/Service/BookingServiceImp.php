@@ -25,7 +25,7 @@ class BookingServiceImp implements BookingService
         $booking->status = 1;
         $booking->phone = $request['phone'];
         $booking->dateTime = $request['date'].' '.$request['time'];
-        $booking->countPeople = $request['countPeople'];
+        $booking->count_of_people = $request['countPeople'];
         $booking->save();
     }
 
@@ -45,7 +45,7 @@ class BookingServiceImp implements BookingService
         $booking->name = $request['name'];
         $booking->phone = $request['phone'];
         $booking->dateTime = $request['date'].' '.$request['time'];
-        $booking->countPeople = $request['countPeople'];
+        $booking->count_of_people = $request['countPeople'];
         $booking->save();
     }
 
@@ -63,10 +63,12 @@ class BookingServiceImp implements BookingService
         return DB::table('bookings')->whereDay('dateTime', '=', $request['date'])->orderBy('dateTime');
     }
     public static function currentDay() {
-        return DB::table('bookings')->whereDay('dateTime', now()->day)->orderBy('dateTime')->get();
+        return DB::table('bookings')->whereDay('dateTime', now()->day)->whereMonth('dateTime', now()->month)->orderBy('dateTime')->get();
     }
     public static function getBookingByDay($day) {
-        return DB::table('bookings')->whereDay('dateTime', $day)->where('status', '=',1)->orderBy('dateTime')->get();
+        //dd(DB::table('bookings')->whereDay('dateTime', date('d', strtotime($day)))->whereMonth('dateTime', date('m', strtotime($day)))->orderBy('dateTime')->get());
+        //dd(DB::table('bookings')->whereDay('dateTime', date('d', strtotime($day)))->whereMonth('dateTime', date('m', strtotime($day)))->orderBy('dateTime')->get());
+        return DB::table('bookings')->whereDay('dateTime', date('d', strtotime($day)))->whereMonth('dateTime', date('m', strtotime($day)))->orderBy('dateTime')->get();
     }
     public static function completeReserveTable($id) {
         $booking = Booking::all()->find($id);

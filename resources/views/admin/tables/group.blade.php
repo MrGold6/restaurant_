@@ -2,17 +2,11 @@
 @section('title')Group @endsection
 @section('content')
 
-    <style>
-        td, th {
-            border: 1px solid #000000;
-            padding: 8px;
-        }
-    </style>
-    <h2>Group</h2>
-    <a href="{{ route('AdminCreateDishGroupView') }}">Create</a>
+    <h2 class="pt-3">Групи</h2>
 
-    <div class="table-responsive">
-        <table class="table table-striped table-sm">
+    <div class="table-wrapper-scroll-y my-custom-scrollbar table-responsive">
+
+        <table class="table tableFixHead table-striped">
             <thead>
             <tr>
                 <th>Ід</th>
@@ -26,12 +20,20 @@
 
                     <td>{{$item['id']}}</td>
                     <td>{{$item['name']}}</td>
-                    <td><a href="{{ route('AdminUpdateDishGroupView', $item->id) }}">Edit</a>
-                        <a href="{{ route('AdminDeleteDishGroup', $item->id) }}" >Delete</a></td>
+                    <td><a href="{{ route('AdminUpdateDishGroupView', $item->id) }}" class="btn btn_edit"><i class="bi bi-vector-pen "></i></a>
+                        <a href="{{ route('AdminDeleteDishGroup', $item->id) }}" class="btn btn_delete"><i class="bi bi-trash "></i></a>
+                    </td>
+
 
                 </tr>
             @endforeach
             </tbody>
         </table>
     </div>
+
+    <center>
+        <button onclick="document.location = '{{ route('AdminCreateDishGroupView') }}';" type="button" class="btn my-2 btn_add">
+            Створити
+        </button>
+    </center>
 @endsection
