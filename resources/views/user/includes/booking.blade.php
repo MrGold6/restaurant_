@@ -29,6 +29,7 @@
 							</select>
 						</div>
 					</div>
+					<input type="hidden" id="status" name="status" value="1">
 					<div class="reservations-spacer"></div>
 					<div class="reservations-date-selector reservations-even">
 						<i class="fa fa-calendar reservations-icon fa-2x-reservations" aria-hidden="true"></i>
