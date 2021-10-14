@@ -1,7 +1,7 @@
 <section id="booking">
 <h2 class="reservations-header">Онлайн бронювання</h2>
-<form action="{{ route('bookTable') }}" >
-
+<form action="{{ route('bookTable') }}" method="post">
+    @csrf
 	<div class="reservations-wrapper-large " id="reservations-space">
 		<div class="reservations-details-wrapper">
 			<div class="reservations-inputs-wrapper">
@@ -10,21 +10,22 @@
 					<div class="reservations-guest-num-selector reservations-even">
 						<i class="fa fa-user reservations-icon fa-2x-reservations" aria-hidden="true"></i>
 						<p class="reservations-label-text">
-														Гостей											</p>
+							Гостей											
+						</p>
 						<div class="reservations-num-guest-selector-inner">
-							<select class="reservations-desktop-input" id="reservations-num-guests-selector">
-								<option>1</option>
-								<option>2</option>
-								<option>3</option>
-								<option>4</option>
-								<option>5</option>
-								<option>6</option>
-								<option>7</option>
-								<option>8</option>
-								<option>9</option>
-								<option>10</option>
-								<option>11</option>
-								<option>12</option>
+							<select class="reservations-desktop-input" id="reservations-num-guests-selector" name="count">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>
+								<option value="11">11</option>
+								<option value="12">12</option>
 							</select>
 						</div>
 					</div>
@@ -79,8 +80,9 @@
 		<div class="contact-fields">
 			<!-- reservation submission button - triggers ajax request -->
 			<div class="submit">
-				<a class="reservations-submit reservations-effect no-load">
-						ЗАБРОНЮВАТИ			</a>
+				<button class="reservations-submit reservations-effect no-load">
+						ЗАБРОНЮВАТИ			
+				</button>
 			</div>
 		</div>
 	</div>
