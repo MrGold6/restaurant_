@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;
 
-0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap);@import url(https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap);@charset "UTF-8";
+0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap);@import url(https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap);@import url(https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap);@charset "UTF-8";
 
 :root {
   --blue: #3490dc;
@@ -10990,7 +10990,7 @@ a.text-dark:focus {
 
 .header-navbar-nav a {
   text-decoration: none;
-  font-size: 15px;
+  font-size: 13px;
   font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -11080,7 +11080,7 @@ a.text-dark:focus {
 }
 
 .hero .aligner .subaligner a {
-  width: 350px;
+  width: 250px;
   padding-top: 5px;
   height: auto;
   color: #fff;
@@ -11093,8 +11093,8 @@ a.text-dark:focus {
   position: relative;
   font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
-  font-weight: 500;
-  font-size: 25px;
+  font-weight: 600;
+  font-size: 18px;
   border: 1px solid #fff;
   transition: 0.2s;
   text-decoration: none;
@@ -11470,5 +11470,802 @@ body {
 .contact-fields .submit {
   margin-top: 42px;
   display: block;
+}
+
+.hd2 {
+  display: block;
+  width: 99vw;
+  text-align: center;
+  font-size: 25px;
+  color: #535353;
+  line-height: 1;
+  padding: 70px 0px;
+  text-transform: uppercase;
+}
+
+.fourth-section {
+  background-color: #000000;
+  background-image: url(http://boboti.com.ua/wp-content/uploads/2017/10/IMG_4480.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 45em;
+}
+
+.behind-menu-filter {
+  background-color: rgba(0, 0, 0, 0.48);
+  height: 45em;
+}
+
+.menu-title-aligner {
+  padding-top: 42px;
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
+.menu-title-aligner #menu-book-title {
+  color: #ffffff;
+  font-size: 40px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  word-break: normal;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  line-height: 1.1;
+}
+
+.owl-carousel {
+  position: relative;
+  width: 100%;
+}
+
+.owl-wrapper-outer {
+  background: no-repeat fixed center center;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  color: #ffffff;
+}
+
+.item {
+  margin: 0;
+  padding: 0 !important;
+}
+
+.menu-book {
+  display: block;
+  width: 100%;
+}
+
+.menu-book-center {
+  width: 50vw;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.menu-book-center .food-type {
+  font-size: 26px;
+  margin-top: 52px;
+  margin-bottom: -13px;
+  text-align: left;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  color: #ffffff;
+}
+
+.under-food-type {
+  width: 100%;
+  border-bottom-color: gray;
+  border-left-color: gray;
+  border-right-color: gray;
+  border-top-color: white;
+  border-top-style: solid;
+  border-top-width: 0.8px;
+  font-weight: 400;
+  line-height: 14px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  width: 100%;
+  z-index: 5;
+}
+
+.dish-list {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  flex-direction: column;
+}
+
+.first-menu-column {
+  width: 50%;
+}
+
+ul.leaders {
+  max-width: 100%;
+  margin-left: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.product-name {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 100;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.product-line {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+ul.leaders span:first-child {
+  font-size: 15px;
+  line-height: 15px;
+}
+
+ul.leaders span:first-child {
+  display: inline-flex;
+  padding-right: 0.33em;
+  max-width: 80%;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  word-break: break-all;
+}
+
+.ellipsis {
+  max-height: 30px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #ffffff;
+}
+
+ul.leaders span + span {
+  float: right;
+  padding-left: 5.5px;
+}
+
+.product-price {
+  font-size: 17px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.product-description {
+  margin-bottom: 30px;
+  margin-top: -6px;
+  font-size: 12px;
+  max-width: 90%;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #ffffff;
+  line-height: 24px;
+  margin-top: 1px;
+}
+
+.product-line:active,
+.product-line:hover {
+  color: #ffffff;
+}
+
+.owl-nav {
+  position: relative;
+  text-align: center;
+  width: 200px;
+  height: 40px;
+  margin-top: 21px;
+  margin-right: auto;
+  margin-left: auto;
+  color: #909090;
+  z-index: 20;
+}
+
+.owl-prev {
+  right: 130px;
+  position: absolute;
+  top: 50%;
+  display: block;
+  outline: none;
+  text-align: left;
+  z-index: 1000;
+  transform: translateY(-50%);
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+
+.owl-prev:hover {
+  color: #566473;
+}
+
+.owl-prev::before {
+  position: absolute;
+  left: 50%;
+  width: 3px;
+  height: 35%;
+  background: #b5b5b5;
+  content: "";
+  transition: transform 0.3s;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  outline: 1px solid transparent;
+  top: 50%;
+  transform: translateX(-50%) rotate(-135deg);
+  transform-origin: 50% 0%;
+  box-sizing: border-box;
+}
+
+.owl-prev::after {
+  top: 50%;
+  transform: translateX(-50%) rotate(-45deg);
+  transform-origin: 0 0;
+  position: absolute;
+  left: 50%;
+  width: 3px;
+  height: 35%;
+  background: #b5b5b5;
+  content: "";
+  transition: transform 0.3s;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  outline: 1px solid transparent;
+  box-sizing: border-box;
+}
+
+.owl-prev:hover::before {
+  transform: translateX(-50%) rotate(-125deg);
+}
+
+.owl-prev:hover::after {
+  transform: translateX(-50%) rotate(-55deg);
+}
+
+.owl-prev span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 70%;
+  text-align: left;
+  cursor: pointer;
+  font-size: 0;
+}
+
+.owl-prev span::before {
+  z-index: 100;
+  height: 0;
+  background: #fff;
+  transition: height 0.3s, transform 0.3s;
+  position: absolute;
+  left: 50%;
+  width: 3px;
+  content: "";
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  outline: 1px solid transparent;
+  top: 50%;
+  transform: translateX(-50%) rotate(-135deg);
+  transform-origin: 50% 0%;
+  box-sizing: border-box;
+}
+
+.owl-prev span::after {
+  z-index: 100;
+  height: 0;
+  background: #fff;
+  transition: height 0.3s, transform 0.3s;
+  position: absolute;
+  left: 50%;
+  width: 3px;
+  content: "";
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  outline: 1px solid transparent;
+  top: 50%;
+  transform: translateX(-50%) rotate(-45deg);
+  transform-origin: 0 0;
+  box-sizing: border-box;
+}
+
+.owl-prev .owl-prev:hover {
+  background-color: none;
+}
+
+.owl-prev:hover span::before {
+  transform: translateX(-50%) rotate(-125deg);
+  height: 50%;
+}
+
+.owl-prev:hover span::after {
+  transform: translateX(-50%) rotate(-55deg);
+  height: 50%;
+}
+
+.owl-next {
+  left: 130px;
+  position: absolute;
+  top: 50%;
+  display: block;
+  outline: none;
+  text-align: left;
+  z-index: 1000;
+  transform: translateY(-50%);
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+
+.owl-next:hover {
+  color: #566473;
+}
+
+.owl-next::before {
+  position: absolute;
+  left: 50%;
+  width: 3px;
+  height: 35%;
+  background: #b5b5b5;
+  content: "";
+  transition: transform 0.3s;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  outline: 1px solid transparent;
+  top: 50%;
+  transform: translateX(-50%) rotate(135deg);
+  transform-origin: 50% 0%;
+  box-sizing: border-box;
+}
+
+.owl-next::after {
+  top: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  transform-origin: 100% 0%;
+  position: absolute;
+  left: 50%;
+  width: 3px;
+  height: 35%;
+  background: #b5b5b5;
+  content: "";
+  transition: transform 0.3s;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  outline: 1px solid transparent;
+  box-sizing: border-box;
+}
+
+.owl-next:hover::before {
+  transform: translateX(-50%) rotate(125deg);
+}
+
+.owl-next:hover::after {
+  transform: translateX(-50%) rotate(55deg);
+}
+
+.owl-next span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 70%;
+  text-align: left;
+  cursor: pointer;
+  font-size: 0;
+}
+
+.owl-next span::before {
+  z-index: 100;
+  height: 0;
+  background: #fff;
+  transition: height 0.3s, transform 0.3s;
+  position: absolute;
+  left: 50%;
+  width: 3px;
+  content: "";
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  outline: 1px solid transparent;
+  top: 50%;
+  transform: translateX(-50%) rotate(135deg);
+  transform-origin: 50% 0%;
+  box-sizing: border-box;
+}
+
+.owl-next span::after {
+  z-index: 100;
+  height: 0;
+  background: #fff;
+  transition: height 0.3s, transform 0.3s;
+  position: absolute;
+  left: 50%;
+  width: 3px;
+  content: "";
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  outline: 1px solid transparent;
+  top: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  transform-origin: 100% 0%;
+  box-sizing: border-box;
+}
+
+.owl-next .owl-prev:hover {
+  background-color: none;
+}
+
+.owl-next:hover span::before {
+  transform: translateX(-50%) rotate(125deg);
+  height: 50%;
+}
+
+.owl-next:hover span::after {
+  transform: translateX(-50%) rotate(55deg);
+  height: 50%;
+}
+
+.white-section1 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  height: auto;
+  width: 100%;
+}
+
+#first-section-container {
+  width: 80%;
+  display: flex;
+  margin-top: 28px;
+  margin-bottom: 28px;
+  position: relative;
+  margin: 28px auto 0;
+  height: auto;
+  clear: both;
+}
+
+.image-gallery-container {
+  display: inline-flex;
+  height: 100%;
+  min-width: 49%;
+  max-width: 49%;
+  overflow: hidden;
+  margin-right: 20px !important;
+  margin: 0;
+  padding: 0;
+}
+
+#curtain-image1 {
+  background-image: url("http://boboti.com.ua/wp-content/uploads/2017/10/des_2.jpg");
+}
+
+#curtain-image1:hover {
+  width: 70%;
+}
+
+#curtain-image2 {
+  background-image: url("http://boboti.com.ua/wp-content/uploads/2017/10/des_4.jpg");
+}
+
+#curtain-image2:hover {
+  width: 70%;
+}
+
+#curtain-image3 {
+  background-image: url("http://boboti.com.ua/wp-content/uploads/2017/10/des_3.jpg");
+}
+
+#curtain-image3:hover {
+  width: 70%;
+}
+
+#curtain-image4 {
+  background-image: url("http://boboti.com.ua/wp-content/uploads/2017/10/des_1.jpg");
+}
+
+#curtain-image4:hover {
+  width: 70%;
+}
+
+.curtain-shrink {
+  width: 25%;
+  transition: all 500ms ease;
+}
+
+.fin-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.the-steam-show-for-medium-up {
+  display: inherit;
+}
+
+#first-section-text {
+  width: 40%;
+  margin-right: 0;
+  margin-left: auto;
+  display: block;
+  position: relative;
+  height: auto;
+  min-height: 300px;
+  clear: both;
+  margin-bottom: 20px;
+}
+
+.white-section-title {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bolder;
+}
+
+.white-section-title span {
+  font-size: 25px;
+  color: #535353;
+  line-height: 1;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 45px;
+  display: block;
+}
+
+.about-text {
+  font-size: 13px;
+  font-family: "Open Sans", sans-serif;
+  text-align: justify;
+  color: #535353;
+  line-height: 16px;
+}
+
+.second-image {
+  height: 462px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.second-image-under-title {
+  font-size: 15px;
+  margin-top: 5px;
+  max-width: 100%;
+  font-family: "Open Sans", sans-serif;
+}
+
+#second-image-container {
+  position: absolute;
+  height: inherit;
+  width: 100%;
+  overflow: hidden;
+  z-index: 0;
+  background-color: #000000;
+}
+
+.parallax-image2 {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  z-index: 0;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.image-aligner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 90%;
+  transform: translateY(-50%);
+}
+
+#third-section-msg2 {
+  color: #ffffff;
+}
+
+#third-section-msg {
+  color: #ffffff;
+}
+
+.logo-third-section {
+  font-size: 23px;
+  line-height: 1.3;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 3px;
+  font-family: "Open Sans", sans-serif;
+  word-break: normal;
+  margin-top: 15.41px;
+  margin-bottom: 3px;
+}
+
+.logo-third-section span {
+  font-weight: 500;
+}
+
+.dishtype-carousel-container {
+  display: grid;
+  position: relative;
+  height: auto;
+}
+
+.white-section2 {
+  width: 100vw;
+  max-width: 100%;
+}
+
+#pros_wr {
+  margin: 95px auto;
+  text-align: center;
+}
+
+.row {
+  max-width: 78vw;
+  width: 100%;
+  justify-content: center;
+}
+
+.pros_item:nth-child(1) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.animated.fadeInUpShort {
+  -webkit-animation-duration: 0.75s;
+          animation-duration: 0.75s;
+  -webkit-animation-name: fadeInUpShort;
+          animation-name: fadeInUpShort;
+}
+
+.animated {
+  opacity: 1 !important;
+}
+
+.pros_item {
+  display: inline-block;
+  float: none;
+  width: 130px !important;
+  height: 120px;
+  text-align: center;
+  margin: 0px 30px;
+}
+
+.pros_item img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+  margin-bottom: 30px;
+  float: none;
+}
+
+.fadeInUpShort {
+  transition-delay: 0s;
+}
+
+.animated {
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.pros_info {
+  display: block;
+  color: #535353;
+  font-size: 15px;
+  line-height: 1;
+  text-align: center;
+}
+
+#add_info_wr {
+  display: block;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.row {
+  width: 100%;
+  max-width: 100vw;
+}
+
+.add_info {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 468px;
+  padding: 0px !important;
+  display: table;
+  padding: 0;
+  float: left;
+}
+
+.add_info:nth-child(1) {
+  background-image: url("http://boboti.com.ua/wp-content/themes/thesteam-child/images/add_info1.jpg");
+}
+
+.add_info:nth-child(2) {
+  background-image: url("http://boboti.com.ua/wp-content/themes/thesteam-child/images/add_info2.jpg");
+}
+
+.add_info:nth-child(3) {
+  background-image: url("http://boboti.com.ua/wp-content/themes/thesteam-child/images/add_info3.jpg");
+}
+
+.add_info_overlay {
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  z-index: 1;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+
+.add_info_overlay:hover {
+  text-decoration: none;
+}
+
+.add_info_hd {
+  color: #fff;
+  font-size: 25px;
+  line-height: 1;
+  text-transform: uppercase;
+  display: block;
+  position: relative;
+  z-index: 3;
+  text-align: center;
+}
+
+.add_info_info {
+  color: #fff;
+  font-size: 15px;
+  line-height: 23px;
+  text-align: center;
+  opacity: 0;
+  display: none;
+  position: relative;
+  z-index: 3;
+}
+
+.add_info:hover .add_info_overlay {
+  background: rgba(0, 0, 0, 0.5);
+  transition: all 1.5s ease;
+}
+
+.add_info:hover .add_info_hd::after,
+.add_info:hover .add_info_info {
+  opacity: 1;
+  display: block;
+}
+
+.add_info_hd::after {
+  content: "";
+  position: relative;
+  z-index: 3;
+  width: 100px;
+  height: 2px;
+  background: #fff;
+  float: none;
+  margin: 30px auto;
 }
 

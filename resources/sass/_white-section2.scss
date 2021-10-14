@@ -1,0 +1,71 @@
+.dishtype-carousel-container {
+    display: grid;
+    position: relative;
+    height: auto;
+}
+
+.white-section2 {
+    width: 100vw;
+    max-width: 100%;
+}
+
+#pros_wr {
+    margin: 95px auto;
+    text-align: center;
+}
+
+.row {
+    max-width: 78vw;
+    width: 100%;
+    justify-content: center;
+}
+
+.pros_item:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.animated.fadeInUpShort {
+    animation-duration: .75s;
+    animation-name: fadeInUpShort;
+}
+
+.animated {
+    opacity: 1 !important;
+}
+
+.pros_item {
+    display: inline-block;
+    float: none;
+    width: 130px !important;
+    height: 120px;
+    text-align: center;
+    margin: 0px 30px;
+
+    img {
+        object-fit: cover;
+        vertical-align: middle;
+        max-width: 100%;
+        height: auto;
+        display: inline-block;
+        margin-bottom: 30px;
+        float: none;
+    }
+}
+
+
+
+.fadeInUpShort {
+    transition-delay: 0s;
+}
+
+.animated {
+    animation-fill-mode: both;
+}
+
+.pros_info {
+    display: block;
+    color: #535353;
+    font-size: 15px;
+    line-height: 1;
+    text-align: center;
+}

@@ -1,0 +1,96 @@
+#add_info_wr {
+    display: block;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.row {
+    width: 100%;
+    max-width: 100vw;
+}
+
+.add_info {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 468px;
+    padding: 0px !important;
+    display: table;
+    padding: 0;
+    float: left;
+    
+    &:nth-child(1) {
+        background-image: url('http://boboti.com.ua/wp-content/themes/thesteam-child/images/add_info1.jpg');
+    }
+
+    &:nth-child(2) {
+        background-image: url('http://boboti.com.ua/wp-content/themes/thesteam-child/images/add_info2.jpg');
+    }
+
+    &:nth-child(3) {
+        background-image: url('http://boboti.com.ua/wp-content/themes/thesteam-child/images/add_info3.jpg');
+    }
+    
+
+    &_overlay {
+        position: relative;
+        display: table-cell;
+        vertical-align: middle;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0);
+        z-index: 1;
+        text-decoration: none;
+        transition: all .5s ease;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    &_hd{
+        color: #fff;
+        font-size: 25px;
+        line-height: 1;
+        text-transform: uppercase;
+        display: block;
+        position: relative;
+        z-index: 3;
+        text-align: center;
+    }
+
+    &_info {
+        color: #fff;
+        font-size: 15px;
+        line-height: 23px;
+        text-align: center;
+        opacity: 0;
+        display: none;
+        position: relative; 
+        z-index: 3;
+    }
+}
+
+.add_info:hover .add_info_overlay {
+    background: rgba(0,0,0,.5);
+    transition: all 1.5s ease;
+}
+
+.add_info:hover .add_info_hd::after, .add_info:hover .add_info_info {
+    opacity: 1;
+    display: block;
+}
+
+.add_info_hd::after {
+    content: '';
+    position: relative;
+    z-index: 3;
+    width: 100px;
+    height: 2px;
+    background: #fff;
+    float: none;
+    margin: 30px auto;
+}

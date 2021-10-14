@@ -7,10 +7,10 @@
             </div>
             <div class="header-navbar-collapse">
                 <div class="header-navbar-nav mr-left">
-                    <a href="#">Про нас</a>
+                    <a href="#white-section1">Про нас</a>
                 </div>
                 <div class="header-navbar-nav">
-                    <a href="#">Меню</a>
+                    <a href="#menu">Меню</a>
                 </div>
                 <div class="header-navbar-nav">
                     <a href="#booking">Бронь столика</a>
@@ -19,10 +19,10 @@
                     <a href="#">Галерея</a>
                 </div>
                 <div class="header-navbar-nav">
-                    <a href="#">Заходи</a>
+                    <a href="#add_info_wr">Заходи</a>
                 </div>
                 <div class="header-navbar-nav">
-                    <a href="#">Контакти</a>
+                    <a href="#footer">Контакти</a>
                 </div>
                 <div class="header-navbar-nav header-navbar-right socials">
                     <a href="#">
