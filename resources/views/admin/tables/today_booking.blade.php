@@ -2,85 +2,106 @@
 @section('title')Booking @endsection
 @section('content')
 
-    <style>
-        td, th {
-            border: 1px solid #000000;
-            padding: 8px;
-        }
-    </style>
-    <h2>Today Booking</h2>
-    <h2>Active</h2>
+    <h2 class="pt-3">Бронювання на сьогодні</h2>
 
-    <div class="table-responsive">
-        <table class="table table-striped table-sm" id="Active">
-            <thead>
-            <tr>
+    <div class="accordion" id="accordionPanelsStayOpenExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                    Відкриті
+                </button>
+            </h2>
+            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                <div class="accordion-body">
 
-                <th>Ід</th>
-                <th>Дата</th>
-                <th>Статус</th>
-                <th>Ім'я</th>
-                <th>Номер телефону</th>
-                <th>Кількість людей</th>
-                <th>Номер столику</th>
-                <th>Дії</th>
-            </tr>
-            </thead>
-            <tbody>
+                    <div class="table-wrapper-scroll-y my-custom-scrollbar table-responsive">
+                        <table class="table tableFixHead table-striped" id="Active">
+                            <thead>
+                            <tr>
 
-            @foreach($Booking as $item)
-                @if($item->status==1)
-                    <tr>
-                        <td>{{$item->id}}</td>
-                        <td>{{$item->dateTime}}</td>
-                        <td>{{$item->status}}</td>
-                        <td>{{$item->name}}</td>
-                        <td>{{$item->phone}}</td>
-                        <td>{{$item->count_of_people}}</td>
-                        <td>{{$item->table_id}}</td>
-                        <td><button id="completeBooking" bookingID="{{ $item->id }}">Done</button></td>
-                    </tr>
-                @endif
-            @endforeach
+                                <th>Ід</th>
+                                <th>Дата</th>
+                                <th>Статус</th>
+                                <th>Ім'я</th>
+                                <th>Номер телефону</th>
+                                <th>Кількість людей</th>
+                                <th>Номер столику</th>
+                                <th>Дії</th>
+                            </tr>
+                            </thead>
+                            <tbody>
 
-            </tbody>
-        </table>
+                            @foreach($Booking as $item)
+                                @if($item->status==1)
+                                    <tr>
+                                        <td>{{$item->id}}</td>
+                                        <td>{{$item->dateTime}}</td>
+                                        <td>{{$item->status}}</td>
+                                        <td>{{$item->name}}</td>
+                                        <td>{{$item->phone}}</td>
+                                        <td>{{$item->count_of_people}}</td>
+                                        <td>{{$item->table_id}}</td>
+
+                                        <td><button id="completeBooking" bookingID="{{ $item->id }}" class="btn btn_add"><i class="bi bi-check-lg text-white"></i></button></td>
+                                    </tr>
+                                @endif
+                            @endforeach
+
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                    Закриті
+                </button>
+            </h2>
+            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                <div class="accordion-body">
+                    <div class="table-wrapper-scroll-y my-custom-scrollbar table-responsive">
+                        <table class="table tableFixHead table-striped" id="notActive">
+                            <thead>
+                            <tr>
+                            <tr>
+                                <th>Ід</th>
+                                <th>Дата</th>
+                                <th>Статус</th>
+                                <th>Ім'я</th>
+                                <th>Номер телефону</th>
+                                <th>Кількість людей</th>
+                                <th>Номер столику</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            @foreach($Booking as $item)
+                                @if($item->status==0)
+                                    <tr id="booking-{{ $item->id }}">
+                                        <td>{{ $item->id }}</td>
+                                        <td>{{ $item->dateTime }}</td>
+                                        <td>{{ $item->status }}</td>
+                                        <td>{{ $item->name }}</td>
+                                        <td>{{ $item->phone }}</td>
+                                        <td>{{ $item->count_of_people }}</td>
+                                        <td>{{ $item->table_id }}</td>
+                                    </tr>
+                                @endif
+                            @endforeach
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
 
-    <h2>Not Active</h2>
-    <div class="table-responsive">
-        <table class="table table-striped table-sm" id="notActive">
-            <thead>
-            <tr>
-            <tr>
-                <th>Ід</th>
-                <th>Дата</th>
-                <th>Статус</th>
-                <th>Ім'я</th>
-                <th>Номер телефону</th>
-                <th>Кількість людей</th>
-                <th>Номер столику</th>
-            </tr>
-            </thead>
-            <tbody>
-            @foreach($Booking as $item)
-                @if($item->status==0)
-                    <tr id="booking-{{ $item->id }}">
-                        <td>{{ $item->id }}</td>
-                        <td>{{ $item->dateTime }}</td>
-                        <td>{{ $item->status }}</td>
-                        <td>{{ $item->name }}</td>
-                        <td>{{ $item->phone }}</td>
-                        <td>{{ $item->count_of_people }}</td>
-                        <td>{{ $item->table_id }}</td>
-                    </tr>
-                @endif
-            @endforeach
-
-            </tbody>
-        </table>
-    </div>
 
 
     <script>
@@ -143,7 +164,7 @@
 
                             if(booking['status'] == 1) {
                                 item += '<td>'
-                                item += '<button id="completeBooking" ' + bookingID + '>Done</button>'
+                                item += '<button id="completeBooking" ' + bookingID + ' class="btn btn_add"><i class="bi bi-check-lg text-white"></i></button>'
                                 item += '</td>'
                             }
 

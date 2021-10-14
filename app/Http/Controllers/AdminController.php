@@ -56,7 +56,7 @@ class AdminController extends Controller
         return view('admin/tables/group', ['Group' => DishesGroupServiceImp::getAll()]);
     }
     public function dish() {
-        return view('admin/tables/dish', ['Dishes' => DishServiceImp::getAll()]);
+        return view('admin/tables/dish', ['dishes' => DishServiceImp::getAll()]);
     }
     public function reserveTable(Request $request) {
         TableServiceImp::create($request);
@@ -76,14 +76,14 @@ class AdminController extends Controller
     }
     public function completeBooking(Request $request) {
         BookingServiceImp::completeReserveTable($request['id']);
-        return BookingServiceImp::getAll();
+        return BookingServiceImp::currentDay();
     }
 
     public function createBookingView() {
         return view('admin/forms/form_booking');
     }
     public function createDishView() {
-        return view('admin/forms/form_dish');
+        return view('admin/forms/form_dish', ['dishes_group' => DishesGroupServiceImp::getAll()]); //g
     }
     public function createDishGroupView() {
         return view('admin/forms/form_group');
@@ -96,7 +96,7 @@ class AdminController extends Controller
         return view('admin/forms/update_booking', ['Booking' => BookingServiceImp::getByID($id)]);
     }
     public function updateDishView($id) {
-        return view('admin/forms/update_dish', ['Dish' => DishServiceImp::getByID($id)]);
+        return view('admin/forms/update_dish', ['Dish' => DishServiceImp::getByID($id)], ['dishes_group' => DishesGroupServiceImp::getAll()]);//g
     }
     public function updateDishGroupView($id) {
         return view('admin/forms/update_group', ['DishesGroup' => DishesGroupServiceImp::getByID($id)]);

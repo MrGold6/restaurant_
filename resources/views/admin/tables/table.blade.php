@@ -2,18 +2,12 @@
 @section('title')Table @endsection
 @section('content')
 
-    <style>
-        td, th {
-            border: 1px solid #000000;
-            padding: 8px;
-        }
-    </style>
-    <h2>Table</h2>
+    <h2 class="pt-3">Столи</h2>
 
-    <a href="{{ route('AdminCreateTableView') }}">Create</a>
 
-    <div class="table-responsive">
-        <table class="table table-striped table-sm">
+
+    <div class="table-wrapper-scroll-y my-custom-scrollbar table-responsive">
+        <table class="table tableFixHead table-striped">
             <thead>
             <tr>
                 <th>Ід</th>
@@ -28,13 +22,18 @@
                     <td>{{$item['id']}}</td>
                     <td>{{$item['count']}}</td>
                     <td>{{$item['status']}}</td>
-                    <td><a href="{{ route('AdminUpdateTableView', $item->id) }}">Edit</a>
-                        <a href="{{ route('AdminDeleteTable', $item->id) }}" >Delete</a></td>
-                </tr>
+                    <td><a href="{{ route('AdminUpdateTableView', $item->id) }}" class="btn btn_edit"><i class="bi bi-vector-pen "></i></a>
+                        <a href="{{ route('AdminDeleteTable', $item->id) }}" class="btn btn_delete"><i class="bi bi-trash "></i></a>
+                    </td>
+
             @endforeach
             </tbody>
         </table>
     </div>
-
+    <center>
+        <button onclick="document.location = '{{ route('AdminCreateTableView') }}';" type="button" class="btn my-2 btn_add">
+            Створити
+        </button>
+    </center>
 
 @endsection

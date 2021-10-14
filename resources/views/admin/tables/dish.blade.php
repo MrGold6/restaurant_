@@ -2,20 +2,14 @@
 @section('title')Dish @endsection
 @section('content')
 
-    <style>
-        td, th {
-            border: 1px solid #000000;
-            padding: 8px;
-        }
-    </style>
 
-    <h2>Dish</h2>
-    <a href="{{ route('AdminCreateDishView') }}">Create</a>
+    <h2 class="pt-3">Страви</h2>
 
-    <div class="table-responsive">
-        <table class="table table-striped table-sm">
+    <div class="table-wrapper-scroll-y my-custom-scrollbar table-responsive">
+
+        <table class="table tableFixHead table-striped">
             <thead>
-            <tr>
+
             <tr>
                 <th>Ід</th>
                 <th>Назва</th>
@@ -27,8 +21,11 @@
             </tr>
             </thead>
             <tbody>
-
-            @foreach($Dishes as $item)
+            @foreach(array_keys($dishes) as $group)
+                <tr class="food-type">
+                    <td colspan="7" style="font-family:'Exo2-Bold', cursive, sans-serif; font-size: 17px;background: #2125292b;">{{ $group }}</td>
+                </tr>
+            @foreach($dishes[$group] as $item)
                 <tr>
                     <td>{{$item->id}}</td>
                     <td>{{$item->name}}</td>
@@ -37,12 +34,22 @@
                     <td>{{$item->count}}</td>
                     <td>{{$item->ingredients}}</td>
 
-                    <td><a href="{{ route('AdminUpdateDishView', $item->id) }}">Edit</a>
-                        <a href="{{ route('AdminDeleteDish', $item->id) }}" >Delete</a></td>
-                </tr>
+                    <td><a href="{{ route('AdminUpdateDishView', $item->id) }}" class="btn btn_edit"><i class="bi bi-vector-pen "></i></a>
+                        <a href="{{ route('AdminDeleteDish', $item->id) }}" class="btn btn_delete"><i class="bi bi-trash "></i></a>
+                    </td>
+
+
+            @endforeach
             @endforeach
             </tbody>
         </table>
     </div>
+
+    <center>
+        <button onclick="document.location = '{{ route('AdminCreateDishView') }}';" type="button" class="btn my-2 btn_add">
+            Створити
+        </button>
+    </center>
+
 
 @endsection

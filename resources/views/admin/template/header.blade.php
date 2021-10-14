@@ -1,37 +1,11 @@
-<nav>
-    <div>
-        <a href="{{route('AdminHome')}}">Admin</a>
-
-        <div>
-            <ul>
-                <li>
-                    <a href="{{route('AdminOut') }}">Вийти</a>
-                </li>
-
-                <li>
-                    <a href="{{route('AdminTodayBooking') }}">Today Booking</a>
-                </li>
-
-                <li>
-                    <a href="{{route('AdminHome')}}">Booking</a>
-                </li>
-                <li >
-                    <a href="{{route('AdminTable')}}">Table</a>
-                </li>
-                <li >
-                    <a href="{{route('AdminGroup')}}">Group</a>
-                </li>
-                <li >
-                    <a href="{{route('AdminDish')}}">Dish</a>
-                </li>
-
-            </ul>
-
+<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="{{route('AdminHome')}}">BobotiAdmin</a>
+    <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-nav">
+        <div class="nav-item text-nowrap">
+            <a class="nav-link px-3" href="{{route('AdminOut') }}">Вийти</a>
         </div>
     </div>
-
-
-</nav>
-
-
-
+</header>
