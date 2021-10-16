@@ -22,7 +22,7 @@ class BookingServiceImp implements BookingService
     public static function create(Request $request)
     {
         //Вибираю столи які мені підходять по кількості людей
-        $tableWithNeedCount = Table::all()->where('count', '>=', $request['count']);
+        $tableWithNeedCount = Table::all()->where('count', '>=', $request['count'])->sortBy('count');
         $tableID = [];
         foreach ($tableWithNeedCount as $table)
             $tableID['id-'.$table->id] = $table->id;
