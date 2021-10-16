@@ -39,4 +39,7 @@ class TableServiceImp implements TableService
         $table->status = $request['status'];
         $table->save();
     }
+    public static function maxCountPeople() {
+        return Table::all()->max('count');
+    }
 }

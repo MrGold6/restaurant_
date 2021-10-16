@@ -57,5 +57,4 @@ Route::post('/Admin/searchBooking', [AdminController::class, 'getBookingByDay'])
 
 //UsersRoute
 Route::get('/', [UserController::class, 'home'])->name('home');
-Route::post('/home', [UserController::class, 'reserveTable'])->name('bookTable');
-Route::post('/Admin/createBooking', [UserController::class, 'createBooking'])->name('createBooking');
+Route::post('/CreateBooking', [UserController::class, 'createBooking'])->name('createBooking');

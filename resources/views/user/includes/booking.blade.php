@@ -1,6 +1,6 @@
 <section id="booking">
 <h2 class="reservations-header">Онлайн бронювання</h2>
-<form action="{{ route('bookTable') }}" method="post">
+<form action="{{ route('createBooking') }}" method="post">
     @csrf
 	<div class="reservations-wrapper-large " id="reservations-space">
 		<div class="reservations-details-wrapper">
@@ -14,49 +14,43 @@
 						</p>
 						<div class="reservations-num-guest-selector-inner">
 							<select class="reservations-desktop-input" id="reservations-num-guests-selector" name="count">
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
-								<option value="5">5</option>
-								<option value="6">6</option>
-								<option value="7">7</option>
-								<option value="8">8</option>
-								<option value="9">9</option>
-								<option value="10">10</option>
-								<option value="11">11</option>
-								<option value="12">12</option>
+                                @for($i = 0; $i < $MaxCount ? $MaxCount : 0; $i++)
+                                    <option value="{{ $i + 1 }}">{{ $i + 1 }}</option>
+                                @endfor
 							</select>
 						</div>
 					</div>
-					<input type="hidden" id="status" name="status" value="1">
 					<div class="reservations-spacer"></div>
 					<div class="reservations-date-selector reservations-even">
 						<i class="fa fa-calendar reservations-icon fa-2x-reservations" aria-hidden="true"></i>
 						<div class="res-line"></div>
 						<p class="reservations-label-text">
-								Дата візиту					</p>
-						<input class="reservations-desktop-input hasDatepicker" size="8" type="date" id="reservations-date-selector">
+								Дата візиту
+                        </p>
+						<input class="reservations-desktop-input hasDatepicker" size="8" type="date" id="reservations-date-selector" name="date">
 					</div>
 					<div class="reservations-spacer"></div>
 					<div class="reservations-hour-selector reservations-even">
 						<i class="fa fa-clock-o reservations-icon fa-2x-reservations" aria-hidden="true"></i>
 						<div class="res-line"></div>
 						<p class="reservations-label-text">
-								Час візиту					</p>
-						<input class="reservations-desktop-input ui-timepicker-input" size="5" type="time" id="reservations-hour-selector" autocomplete="off">
+								Час візиту
+                        </p>
+						<input class="reservations-desktop-input ui-timepicker-input" size="5" type="time" id="reservations-hour-selector" autocomplete="off" name="time">
 					</div>
 				</div>
 				<div class="contact-fields-block ts-cleafix">
 					<div class="res-phone-input res-align-left">
-						<input type="text" id="phone">
+						<input type="text" id="phone" name="phone">
 						<label class="phone-number-placeholder">
-								Телефон					</label>
+								Телефон
+                        </label>
 					</div>
 					<div class="res-email-input res-align-right">
-						<input type="text" id="email">
+						<input type="text" id="email" name="name">
 								<label class="email-placeholder">
-									Ім'я							</label>
+									Ім'я
+                                </label>
 					</div>
 				</div>
 			</div>
