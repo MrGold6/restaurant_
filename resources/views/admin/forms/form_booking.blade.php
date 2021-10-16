@@ -5,6 +5,13 @@
         <div class="card card_form shadow">
             <div class="card-body ">
                 <legend class="card-title text-center">Бронювання</legend>
+                @if(\Illuminate\Support\Facades\Session::has('Log'))
+                    <div class="alert alert-primary" role="alert">
+                        {{ \Illuminate\Support\Facades\Session::get('Log') }}.<br> <a href="{{route('AdminHome')}}" class="alert-link">Повернутися до списку бронювань.</a>
+                    </div>
+
+
+                @endif
                     <form action="{{ route('createBooking') }}" method="post">
                         @csrf
                         <div class="row mb-3">
@@ -25,7 +32,11 @@
                         <div class="row mb-3">
                             <label class="col-sm-6 col-form-label ln">Кількість гостей:</label>
                             <div class="col-sm-6">
-                                <input class="form-control" type="number" name="countPeople" min="0" required>
+                                <select class="form-select" name="count">
+                                    @for($i = 0; $i < $MaxCount ? $MaxCount : 0; $i++)
+                                        <option value="{{ $i + 1 }}">{{ $i + 1 }}</option>
+                                    @endfor
+                                </select>
                             </div>
                         </div>
 

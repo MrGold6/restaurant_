@@ -80,7 +80,7 @@ class AdminController extends Controller
     }
 
     public function createBookingView() {
-        return view('admin/forms/form_booking');
+        return view('admin/forms/form_booking', ['MaxCount' => TableServiceImp::maxCountPeople()]);
     }
     public function createDishView() {
         return view('admin/forms/form_dish', ['dishes_group' => DishesGroupServiceImp::getAll()]); //g
@@ -93,7 +93,7 @@ class AdminController extends Controller
     }
 
     public function updateBookingView($id) {
-        return view('admin/forms/update_booking', ['Booking' => BookingServiceImp::getByID($id)]);
+        return view('admin/forms/update_booking', ['Booking' => BookingServiceImp::getByID($id)], ['MaxCount' => TableServiceImp::maxCountPeople()]);
     }
     public function updateDishView($id) {
         return view('admin/forms/update_dish', ['Dish' => DishServiceImp::getByID($id)], ['dishes_group' => DishesGroupServiceImp::getAll()]);//g
