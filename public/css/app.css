@@ -12269,3 +12269,122 @@ ul.leaders span + span {
   margin: 30px auto;
 }
 
+.footer {
+  background-color: #313130;
+  border-top: 1px solid #e5e5e5;
+  color: #fff;
+  padding: 3rem 0 0.78571rem;
+  position: relative;
+}
+
+.footer-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  padding: 0 14px;
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+}
+
+.footer__logo__container {
+  width: 25%;
+  display: flex;
+  height: auto;
+}
+
+.aboutFooter-links {
+  width: 25%;
+  height: auto;
+  float: left;
+}
+
+.footer-title {
+  position: relative;
+  padding: 0 0 5px 0;
+  margin-top: 0;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.footer-title::after {
+  background-color: #fff;
+  content: "";
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+}
+
+.footer-info-list {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.footer-info-list a {
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  color: #fff;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.footer-info-list a:hover {
+  text-decoration: none;
+  padding-left: 5px;
+  color: #9dc4a8;
+}
+
+.footerStore-description {
+  color: #fff;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.footerStore-details ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footerStore-details ul li {
+  margin: 10px 0;
+}
+
+.footerStore-details ul li .storeDetail-icon {
+  display: inline-block;
+  text-align: center;
+  width: 20px;
+  margin-right: 5px;
+  color: #fff;
+}
+
+.footerStore-details ul li .storeDetail-icon svg {
+  fill: #fff;
+  vertical-align: middle;
+}
+
+.footerStore-details ul li .storeDetail {
+  display: inline-block;
+}
+
+.footerStore-details ul li .storeDetail a {
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  color: #fff;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.footerStore-details ul li .storeDetail a:hover {
+  text-decoration: none;
+  color: #9dc4a8;
+}
+
