@@ -11,7 +11,7 @@
                     <div class="row mb-3">
                         <label class="col-sm-6 col-form-label ln">Iд:</label>
                         <div class="col-sm-6">
-                            <input class="form-control" type="number" name="id" value="{{$DishesGroup->id}}" required>
+                            <input class="form-control" type="number" name="id" value="{{$DishesGroup->id}}" readonly>
                         </div>
                     </div>
 

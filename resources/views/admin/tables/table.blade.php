@@ -12,7 +12,7 @@
             <tr>
                 <th>Ід</th>
                 <th>Кількість місць</th>
-                <th>Статус</th>
+
                 <th>Дії</th>
             </tr>
             </thead>
@@ -21,7 +21,6 @@
                 <tr>
                     <td>{{$item['id']}}</td>
                     <td>{{$item['count']}}</td>
-                    <td>{{$item['status']}}</td>
                     <td><a href="{{ route('AdminUpdateTableView', $item->id) }}" class="btn btn_edit"><i class="bi bi-vector-pen "></i></a>
                         <a href="{{ route('AdminDeleteTable', $item->id) }}" class="btn btn_delete"><i class="bi bi-trash "></i></a>
                     </td>
