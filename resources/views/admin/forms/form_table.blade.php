@@ -12,7 +12,7 @@
                     <div class="row mb-3">
                         <label class="col-sm-6 col-form-label ln">Кількість місць:</label>
                         <div class="col-sm-6">
-                            <input class="form-control" type="number" name="count" min="0" max="4" required>
+                            <input class="form-control" type="number" name="count" min="0" max="10" required>
                         </div>
                     </div>
 

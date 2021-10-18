@@ -12,14 +12,14 @@
                     <div class="row mb-3">
                         <label class="col-sm-6 col-form-label ln">Iд:</label>
                         <div class="col-sm-6">
-                            <input class="form-control" type="number" name="id" value="{{$Dish->id}}" required>
+                            <input class="form-control" type="number" name="id" value="{{$Dish->id}}" readonly>
                         </div>
                     </div>
 
                     <div class="row mb-3">
                         <label class="col-sm-6 col-form-label ln">Назва:</label>
                         <div class="col-sm-6">
-                            <input class="form-control" type="text" name="name" value="{{$Dish->name}}" maxlength="20" required>
+                            <input class="form-control" type="text" name="name" value="{{$Dish->name}}" required>
                         </div>
                     </div>
 

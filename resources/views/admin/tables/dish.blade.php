@@ -34,7 +34,7 @@
                     <td>{{$item->count}}</td>
                     <td>{{$item->ingredients}}</td>
 
-                    <td><a href="{{ route('AdminUpdateDishView', $item->id) }}" class="btn btn_edit"><i class="bi bi-vector-pen "></i></a>
+                    <td ><a href="{{ route('AdminUpdateDishView', $item->id) }}" class="btn btn_edit mr-1"><i class="bi bi-vector-pen "></i></a>
                         <a href="{{ route('AdminDeleteDish', $item->id) }}" class="btn btn_delete"><i class="bi bi-trash "></i></a>
                     </td>
 
