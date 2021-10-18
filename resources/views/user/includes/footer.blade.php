@@ -1,6 +1,6 @@
 @section('footer')
 <section id="footer">
-<footer style="margin-top: 100px">
+<footer style="margin-top: 150px">
     <div class="footer">
         <div class="footer-container">
             <div class="footer__logo__container">

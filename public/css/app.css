@@ -10950,8 +10950,8 @@ a.text-dark:focus {
 }
 
 .header-navbar__container {
-  padding-right: 11vw;
-  padding-left: 11vw;
+  padding-right: 8vw;
+  padding-left: 8vw;
   margin: 0;
   height: 80px;
 }
@@ -11121,6 +11121,7 @@ a.text-dark:focus {
   display: block;
   height: 350px;
   width: 100%;
+  position: relative;
 }
 
 .reservations-details-wrapper {
@@ -11456,7 +11457,9 @@ body {
 }
 
 .contact-fields {
-  display: block;
+  display: flex;
+  justify-content: center;
+  position: relative;
   padding-top: 10px;
   width: 75%;
   text-align: center;
@@ -12272,6 +12275,14 @@ ul.leaders span + span {
   background: #fff;
   float: none;
   margin: 30px auto;
+}
+
+#footer {
+  position: relative;
+}
+
+footer {
+  position: relative;
 }
 
 .footer {
