@@ -16,6 +16,7 @@
             display: block;
             height: 350px;
             width: 100%;
+            position: relative;
         }
     }
 
@@ -203,6 +204,7 @@
 
 .contact {
     &-fields {
+
         &-block {
             display: block;
             margin-left: 0;
@@ -377,7 +379,9 @@ body {
 }
 
 .contact-fields {
-    display: block;
+    display: flex;
+    justify-content: center;
+    position: relative;
     padding-top: 10px;
     width: 75%;
     text-align: center;
