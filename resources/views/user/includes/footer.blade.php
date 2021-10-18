@@ -37,7 +37,7 @@
                 <div class="footerStore-description">
                 About restaurant goes here
                 <div data-content-region="home_footer_company_info"></div>
-                </div><!--.footerStore-description ends-->
+                </div>
                 <div class="footerStore-details">
                 <ul>
 
@@ -46,11 +46,11 @@
                         <svg height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 274.64 384.38">
                             <path d="M154.59,5.54c7,1.19,14.1,2,21,3.64C218,19.52,248.64,44.83,267.74,83.67c19.89,40.44,18.51,81.58,1.31,122.65-9.33,22.29-22.32,42.45-36.56,61.82-17.7,24.08-36,47.71-53.26,72.12-10,14.15-18.44,29.41-27.45,44.25-1.7,2.79-3.21,5.43-6.93,5.41-3.54,0-5.2-2.43-6.65-5.22-16.16-31.08-36.83-59.18-57.6-87.22-16.52-22.31-33.31-44.43-47.14-68.59-11.37-19.86-20.68-40.6-24-63.42C2.14,115.41,17.29,73.07,54.94,39.3c22-19.7,48.16-30.46,77.6-33.14a15.06,15.06,0,0,0,2.53-.62ZM216.9,142.88A72,72,0,1,0,145.19,215,72.09,72.09,0,0,0,216.9,142.88Z" transform="translate(-7.67 -5.54)"></path>
                         </svg>
-                        </div><!--.storeDetail-icon end-->
+                        </div>
 
                         <div class="storeDetail">
                         <a href="http://maps.google.com/maps?q=123 Widget Street Acmeville, AC 12345" aria-label="Store address: 123 Widget Street Acmeville, AC 12345">123 Widget Street Acmeville, AC 12345</a>
-                        </div><!--.storeDetail ends-->
+                        </div>
                     </li>
 
                     <li>
@@ -83,7 +83,7 @@
                     </li>
 
                 </ul>
-                </div><!--.footerStore-details ends-->
+                </div>
             </div>
 
         </div>

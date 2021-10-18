@@ -1,5 +1,13 @@
 <section id="booking">
 <h2 class="reservations-header">Онлайн бронювання</h2>
+@if(\Illuminate\Support\Facades\Session::has('Log'))
+	<div class="alert alert-secondary alert-dismissible fade show my-alert" role="alert">
+		{{ \Illuminate\Support\Facades\Session::get('Log') }}.<br> 
+		<button type="button" class="close close-alert" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+	</div>
+@endif
 <form action="{{ route('createBooking') }}" method="post">
     @csrf
 	<div class="reservations-wrapper-large " id="reservations-space">
@@ -27,7 +35,7 @@
 						<p class="reservations-label-text">
 								Дата візиту
                         </p>
-						<input class="reservations-desktop-input hasDatepicker" size="8" type="date" id="reservations-date-selector" name="date">
+						<input class="reservations-desktop-input hasDatepicker" size="8" type="date" id="reservations-date-selector" name="date" required>
 					</div>
 					<div class="reservations-spacer"></div>
 					<div class="reservations-hour-selector reservations-even">
@@ -36,18 +44,18 @@
 						<p class="reservations-label-text">
 								Час візиту
                         </p>
-						<input class="reservations-desktop-input ui-timepicker-input" size="5" type="time" id="reservations-hour-selector" autocomplete="off" name="time">
+						<input class="reservations-desktop-input ui-timepicker-input" size="5" type="time" id="reservations-hour-selector" autocomplete="off" name="time" required>
 					</div>
 				</div>
 				<div class="contact-fields-block ts-cleafix">
 					<div class="res-phone-input res-align-left">
-						<input type="text" id="phone" name="phone">
+						<input type="tel" pattern="[0-9]{10}" id="phone" name="phone" required>
 						<label class="phone-number-placeholder">
 								Телефон
                         </label>
 					</div>
 					<div class="res-email-input res-align-right">
-						<input type="text" id="email" name="name">
+						<input type="text" id="email" name="name" required>
 								<label class="email-placeholder">
 									Ім'я
                                 </label>
@@ -74,13 +82,18 @@
 		</div>
 
 		<div class="contact-fields">
-			<!-- reservation submission button - triggers ajax request -->
 			<div class="submit">
-				<button class="reservations-submit reservations-effect no-load">
-						ЗАБРОНЮВАТИ
+				<button class="reservations-submit reservations-effect no-load" onclick="Scroll()">
+					ЗАБРОНЮВАТИ
 				</button>
 			</div>
 		</div>
 	</div>
 </form>
 </section>
+
+<script>
+	$(".close-alert").click(function () {
+    $(".my-alert").css("display", "none");
+});
+</script>

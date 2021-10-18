@@ -11389,7 +11389,7 @@ a.text-dark:focus {
   width: inherit;
   text-align: center;
   z-index: 0;
-  bottom: 0;
+  bottom: -40px !important;
   transition: bottom 0.4s, opacity 0.4s, font-size 0.4s, color 0.4s;
 }
 
@@ -11406,18 +11406,16 @@ label.email-placeholder {
   width: inherit;
   text-align: center;
   z-index: 0;
-  bottom: 0;
+  bottom: -40px !important;
   transition: bottom 0.4s, opacity 0.4s, font-size 0.4s, color 0.4s;
 }
 
 #phone:focus ~ .phone-number-placeholder {
   display: block !important;
-  bottom: -40px !important;
 }
 
 #email:focus ~ .email-placeholder {
   display: block !important;
-  bottom: -40px !important;
 }
 
 #reservations-num-guests-selector-button {
@@ -11470,6 +11468,13 @@ body {
 .contact-fields .submit {
   margin-top: 42px;
   display: block;
+}
+
+.my-alert {
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  width: 80%;
 }
 
 .hd2 {
